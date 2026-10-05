@@ -69,6 +69,10 @@
     .util-link:hover { color: var(--ink-700) !important; text-decoration-color: var(--ink-900) !important; }
     .util-link:focus-visible { outline: 2px solid var(--ink-900); outline-offset: 3px; }
     .video-tile:focus-visible { outline: 3px solid var(--ink-900); outline-offset: 3px; }
+    /* footer links: white on the dark-teal swoosh panel (5.0:1), underline on hover, no transition */
+    .footer-link { color: #ffffff; text-decoration: none; }
+    .footer-link:hover { color: #ffffff; text-decoration: underline; text-decoration-color: #ffffff; text-underline-offset: 4px; }
+    .footer-link:focus-visible { outline: 2px solid #ffffff; outline-offset: 3px; }
   </style>
 </helmet>
 <div style="{{ pageStyle }}">
@@ -84,11 +88,11 @@
 
     <header style="{{ heroStyle }}">
       <div style="{{ heroTopRowStyle }}">
-        <span style="{{ heroLogoStyle }}">Svenja Mumelter<span style="{{ heroLogoDotStyle }}" aria-hidden="true">.</span></span>
+        <img src="assets/edtelligent-logo.svg" alt="EDTELLIGENT" width="237" height="42" style="{{ heroLogoStyle }}" />
         <nav aria-label="Inhalt" class="toc" style="{{ navStyle }}"><a href="#ueber-mich">Über mich</a><a href="#ansatz">Ansatz</a><a href="#royalshrimp">Case RoyalShrimp</a><a href="#cuply">Case Cuply</a><a href="#kontakt">Kontakt</a></nav>
       </div>
       <div style="{{ heroTextStyle }}">
-        <p style="{{ heroKickerStyle }}">Bewerbung als Growth Marketing Managerin bei EDTELLIGENT</p>
+        <p style="{{ heroKickerStyle }}">Svenja Mumelter · Bewerbung als Growth Marketing Managerin</p>
         <h1 style="{{ h1Style }}"><span style="{{ h1AccentStyle }}">Sichtbar werden.</span> Leads qualifizieren. <em style="{{ h1EmStyle }}">Mit KI skalieren.</em></h1>
         <p style="{{ heroLeadStyle }}">Auf dieser Seite zeige ich Ihnen, wie ich arbeite, mit einem Video meines ehemaligen Onlineshops und einer Case Study aus meiner Weiterbildung.</p>
       </div>
@@ -220,15 +224,50 @@
     </div>
   </div>
 
+  <!-- Footer modelled on the edtelligent.de footer: brand teal, petrol wordmark with white dot, petrol copy left;
+       the darker swoosh is mirrored to the right so the white text sits on dark teal (5.0:1) instead of the light teal (2.25:1). -->
   <footer style="{{ footerStyle }}">
-    <div style="{{ footerRowStyle }}">
+    <svg style="{{ footerArcsStyle }}" viewBox="0 0 800 400" preserveAspectRatio="xMinYMin slice" aria-hidden="true" focusable="false">
+      <!-- five crisp, stacked arcs (9 % each); darkest overlap #26afa2 keeps the petrol text at >= 4.5:1 -->
+      <circle cx="-180" cy="620" r="900" fill="#1e8f8a" opacity="0.09"></circle>
+      <circle cx="-180" cy="620" r="800" fill="#1e8f8a" opacity="0.09"></circle>
+      <circle cx="-180" cy="620" r="710" fill="#1e8f8a" opacity="0.09"></circle>
+      <circle cx="-180" cy="620" r="630" fill="#1e8f8a" opacity="0.09"></circle>
+      <circle cx="-180" cy="620" r="560" fill="#1e8f8a" opacity="0.09"></circle>
+    </svg>
+    <div style="{{ footerMainStyle }}">
       <div style="{{ footerBrandStyle }}">
         <span style="{{ footerNameStyle }}">Svenja Mumelter<span aria-hidden="true" style="{{ footerDotStyle }}">.</span></span>
-        <span style="{{ footerTextStyle }}">© 2026 · München</span>
+        <p style="{{ footerAboutStyle }}">Konzept, Inhalt und Design: Svenja Mumelter, gestaltet in Figma. Umgesetzt KI-gestützt mit Claude Code, von der Analyse der Stellenanzeige bis zum Deployment.</p>
       </div>
-      <div style="{{ footerLinksStyle }}">
-        <span style="{{ footerTextStyle }}">Konzept, Inhalt &amp; Design: Svenja Mumelter · Figma</span>
-        <span style="{{ footerTextStyle }}">Umsetzung: KI-gestützt mit Claude Code</span>
+      <div style="{{ footerBarLeftStyle }}"><span>© 2026 Svenja Mumelter. Alle Rechte vorbehalten.</span></div>
+    </div>
+    <div style="{{ footerPanelStyle }}">
+      <svg style="{{ footerCurveDesktopStyle }}" viewBox="0 0 220 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path d="M220 0 C 165 38, 80 78, 0 100 L220 100 Z" fill="#1fa597"></path>
+        <path d="M220 0 C 178 44, 118 80, 64 100 L220 100 Z" fill="#007d73"></path>
+      </svg>
+      <svg style="{{ footerCurveMobileStyle }}" viewBox="0 0 100 48" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path d="M0 48 C 30 40, 68 22, 100 0 L100 48 Z" fill="#1fa597"></path>
+        <path d="M0 48 C 38 44, 74 30, 100 13 L100 48 Z" fill="#007d73"></path>
+      </svg>
+      <div style="{{ footerColsStyle }}">
+        <nav aria-label="Inhalt (Footer)" style="{{ footerColStyle }}">
+          <span style="{{ footerColHeadStyle }}">Auf dieser Seite</span>
+          <a href="#ueber-mich" class="footer-link" style="{{ footerLinkStyle }}">Über mich</a>
+          <a href="#ansatz" class="footer-link" style="{{ footerLinkStyle }}">Ansatz</a>
+          <a href="#royalshrimp" class="footer-link" style="{{ footerLinkStyle }}">Case RoyalShrimp</a>
+          <a href="#cuply" class="footer-link" style="{{ footerLinkStyle }}">Case Cuply</a>
+        </nav>
+        <div style="{{ footerColStyle }}">
+          <span style="{{ footerColHeadStyle }}">Kontakt</span>
+          <a href="mailto:svenja.mumelter@gmx.de" class="footer-link" style="{{ footerLinkStyle }}">E-Mail schreiben</a>
+          <a href="tel:+4917681922033" class="footer-link" style="{{ footerLinkStyle }}">0176 81922033</a>
+        </div>
+      </div>
+      <div style="{{ footerBarRightStyle }}">
+        <span style="{{ footerCopyMobileStyle }}">© 2026 Svenja Mumelter</span>
+        <span>Made with <svg width="13" height="13" viewBox="0 0 24 24" fill="#ffffff" role="img" aria-label="Liebe" style="{{ footerHeartStyle }}"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.2 0 3.6 1.2 5.2 3 1.6-1.8 3-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"></path></svg> &amp; Claude Code in Munich</span>
       </div>
     </div>
   </footer>
@@ -325,11 +364,8 @@ class Component extends DCLogic {
         alignItems: m ? "flex-start" : "center", justifyContent: "space-between",
         gap: m ? 20 : 24,
       },
-      heroLogoStyle: {
-        display: "block", fontFamily: display, fontWeight: 700,
-        fontSize: m ? 20 : 23, letterSpacing: "-0.03em", lineHeight: 1.2, color: strong,
-      },
-      heroLogoDotStyle: { color: "var(--teal)" },
+      /* company logo top left (as on the Mehr Ampere / AkuRat pages); the user's own wordmark lives in the footer */
+      heroLogoStyle: { display: "block", height: m ? 32 : 42, width: "auto" },
       navStyle: {
         display: "flex", flexWrap: "wrap", gap: m ? "6px 18px" : "8px 36px",
         fontFamily: font, fontWeight: 500, fontSize: m ? 15 : 16, lineHeight: 1.4,
@@ -639,32 +675,71 @@ class Component extends DCLogic {
       },
       primaryBtnStyle: Object.assign({}, pill, { height: 48, padding: m ? "0 36px" : "0 48px", fontSize: m ? 17 : 18 }),
 
-      /* Footer: edtelligent teal block with rounded top corners, petrol text (5.6:1 on the teal) */
+      /* Footer, modelled on edtelligent.de: brand teal with rounded top; left = petrol wordmark (white dot) + petrol copy (5.6:1);
+         right = mirrored darker swoosh panel (#007d73) carrying the white text (5.0:1); bottom bars with a hairline above */
       footerStyle: {
+        position: "relative", overflow: "hidden",
         backgroundColor: "var(--teal)",
         borderRadius: m ? "28px 28px 0 0" : "40px 40px 0 0",
-        display: "flex", flexDirection: "column",
-        padding: m ? "40px 24px 44px 24px" : "56px 72px 60px 72px",
+        display: m ? "flex" : "grid", flexDirection: "column",
+        gridTemplateColumns: "minmax(0, 1fr) minmax(460px, 42%)",
       },
-      footerRowStyle: {
-        display: "flex", flexDirection: m ? "column" : "row", flexWrap: "wrap",
-        justifyContent: "space-between", alignItems: m ? "flex-start" : "flex-end",
-        gap: m ? 18 : 24, width: "100%",
+      footerArcsStyle: {
+        position: "absolute", left: 0, top: 0, zIndex: 0, pointerEvents: "none",
+        width: m ? "100%" : "56%", height: "100%",
       },
-      footerBrandStyle: { display: "flex", flexDirection: "column", gap: 4 },
+      footerMainStyle: {
+        position: "relative", zIndex: 1,
+        display: "flex", flexDirection: "column", gap: m ? 24 : 0, minWidth: 0,
+        padding: m ? "40px 24px 72px 24px" : "64px 48px 36px 72px",
+      },
+      footerBrandStyle: { display: "flex", flexDirection: "column", gap: m ? 12 : 16, maxWidth: 480, marginBottom: m ? 0 : 72 },
       footerNameStyle: {
-        fontFamily: display, fontWeight: 700, fontSize: m ? 22 : 26, letterSpacing: "-0.03em",
+        fontFamily: display, fontWeight: 700, fontSize: m ? 24 : 30, letterSpacing: "-0.03em",
         lineHeight: 1.1, color: strong,
       },
       footerDotStyle: { color: "#ffffff" },
-      footerLinksStyle: {
-        display: "flex", flexDirection: m ? "column" : "row", flexWrap: "wrap",
-        gap: m ? 8 : 32,
-      },
-      footerTextStyle: {
-        fontFamily: font, fontWeight: 500, fontSize: m ? 14 : 15, lineHeight: 1.5,
+      footerAboutStyle: {
+        fontFamily: font, fontWeight: 500, fontSize: m ? 14.5 : 15, lineHeight: 1.6,
         color: strong, margin: 0,
       },
+      footerBarLeftStyle: {
+        display: m ? "none" : "block",
+        marginTop: "auto", paddingTop: 20, borderTop: "1px solid rgba(30,55,65,0.22)",
+        fontFamily: font, fontWeight: 500, fontSize: 13.5, lineHeight: 1.5, color: strong,
+      },
+      footerPanelStyle: {
+        position: "relative", zIndex: 1, backgroundColor: "#007d73",
+        display: "flex", flexDirection: "column", gap: m ? 32 : 0, minWidth: 0,
+        padding: m ? "8px 24px 32px 24px" : "64px 72px 36px 24px",
+      },
+      footerCurveDesktopStyle: {
+        display: m ? "none" : "block", position: "absolute",
+        top: 0, bottom: 0, left: -219, width: 220, height: "100%", pointerEvents: "none",
+      },
+      footerCurveMobileStyle: {
+        display: m ? "block" : "none", position: "absolute",
+        left: 0, right: 0, top: -47, width: "100%", height: 48, pointerEvents: "none",
+      },
+      footerColsStyle: {
+        position: "relative", display: "flex", flexDirection: "row", flexWrap: "wrap",
+        gap: m ? "28px 48px" : "32px 64px", justifyContent: m ? "flex-start" : "flex-end",
+        marginBottom: m ? 0 : 72,
+      },
+      footerColStyle: { display: "flex", flexDirection: "column", gap: 10, minWidth: 0 },
+      footerColHeadStyle: {
+        fontFamily: font, fontWeight: 600, fontSize: m ? 15.5 : 16, lineHeight: 1.4, letterSpacing: "-0.01em",
+        color: "#ffffff", marginBottom: 4,
+      },
+      footerLinkStyle: { fontFamily: font, fontWeight: 400, fontSize: m ? 15 : 15, lineHeight: 1.5 },
+      footerBarRightStyle: {
+        position: "relative",
+        display: "flex", flexDirection: m ? "column" : "row", justifyContent: m ? "flex-start" : "flex-end", gap: m ? 6 : 0,
+        marginTop: m ? 0 : "auto", paddingTop: 20, borderTop: "1px solid rgba(255,255,255,0.3)",
+        fontFamily: font, fontWeight: 500, fontSize: 13.5, lineHeight: 1.5, color: "#ffffff",
+      },
+      footerCopyMobileStyle: { display: m ? "block" : "none" },
+      footerHeartStyle: { display: "inline-block", verticalAlign: "-1px", margin: "0 1px" },
     };
   }
 }
