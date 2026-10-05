@@ -118,6 +118,58 @@
     </section>
 
     <section id="ansatz" aria-labelledby="ansatz-title" style="{{ introStyle }}" data-section="intro">
+      <!-- soft brush arc top right, modelled on the "Warum Edtelligent?" section (generated, seeded); masked so it fades out to the left -->
+      <svg style="{{ ansatzSwooshStyle }}" viewBox="0 0 700 520" preserveAspectRatio="xMaxYMin slice" fill="none" aria-hidden="true" focusable="false">
+        <defs>
+          <filter id="brushSoft" x="-5%" y="-5%" width="110%" height="110%"><feGaussianBlur stdDeviation="2.2"></feGaussianBlur></filter>
+          <linearGradient id="brushFadeGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"></stop><stop offset="0.45" stop-color="#fff" stop-opacity="0.85"></stop><stop offset="1" stop-color="#fff" stop-opacity="1"></stop></linearGradient>
+          <mask id="brushFade"><rect width="700" height="520" fill="url(#brushFadeGrad)"></rect></mask>
+          <linearGradient id="brushFadeGradV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="1"></stop><stop offset="0.6" stop-color="#fff" stop-opacity="1"></stop><stop offset="1" stop-color="#fff" stop-opacity="0"></stop></linearGradient>
+          <mask id="brushFadeV"><rect width="700" height="520" fill="url(#brushFadeGradV)"></rect></mask>
+        </defs>
+        <g mask="url(#brushFadeV)"><g mask="url(#brushFade)"><g filter="url(#brushSoft)">
+          <circle cx="150" cy="700" r="650" stroke="#3a9ea4" stroke-width="30" stroke-opacity="0.08"></circle>
+          <circle cx="150" cy="700" r="650" stroke="#3a9ea4" stroke-width="10" stroke-opacity="0.08"></circle>
+          <circle cx="150" cy="700" r="655" stroke="#3a9ea4" stroke-width="28" stroke-opacity="0.03"></circle>
+          <circle cx="150" cy="700" r="621" stroke="#2ac1b0" stroke-width="20" stroke-opacity="0.08"></circle>
+          <circle cx="150" cy="700" r="687" stroke="#3a9ea4" stroke-width="33" stroke-opacity="0.09"></circle>
+          <circle cx="150" cy="700" r="691" stroke="#3a9ea4" stroke-width="24" stroke-opacity="0.07"></circle>
+          <circle cx="150" cy="700" r="726" stroke="#2ac1b0" stroke-width="6" stroke-opacity="0.04"></circle>
+          <circle cx="150" cy="700" r="608" stroke="#2ac1b0" stroke-width="27" stroke-opacity="0.05"></circle>
+          <circle cx="150" cy="700" r="678" stroke="#1e8f8a" stroke-width="20" stroke-opacity="0.07"></circle>
+          <circle cx="150" cy="700" r="660" stroke="#2ac1b0" stroke-width="18" stroke-opacity="0.04"></circle>
+          <circle cx="150" cy="700" r="760" stroke="#2ac1b0" stroke-width="25" stroke-opacity="0.05"></circle>
+          <circle cx="150" cy="700" r="606" stroke="#5fb3b3" stroke-width="5" stroke-opacity="0.06"></circle>
+          <circle cx="150" cy="700" r="582" stroke="#2ac1b0" stroke-width="29" stroke-opacity="0.05"></circle>
+          <circle cx="150" cy="700" r="752" stroke="#2ac1b0" stroke-width="10" stroke-opacity="0.09"></circle>
+          <circle cx="150" cy="700" r="570" stroke="#8fd3cb" stroke-width="33" stroke-opacity="0.05"></circle>
+          <circle cx="150" cy="700" r="575" stroke="#1e8f8a" stroke-width="27" stroke-opacity="0.04"></circle>
+          <circle cx="150" cy="700" r="577" stroke="#5fb3b3" stroke-width="4" stroke-opacity="0.05"></circle>
+          <circle cx="150" cy="700" r="745" stroke="#1e8f8a" stroke-width="11" stroke-opacity="0.03"></circle>
+          <circle cx="150" cy="700" r="572" stroke="#8fd3cb" stroke-width="9" stroke-opacity="0.06"></circle>
+          <circle cx="150" cy="700" r="649" stroke="#1e8f8a" stroke-width="34" stroke-opacity="0.08"></circle>
+          <circle cx="150" cy="700" r="644" stroke="#8fd3cb" stroke-width="7" stroke-opacity="0.05"></circle>
+          <circle cx="150" cy="700" r="603" stroke="#5fb3b3" stroke-width="30" stroke-opacity="0.09"></circle>
+          <circle cx="150" cy="700" r="679" stroke="#2ac1b0" stroke-width="10" stroke-opacity="0.05"></circle>
+          <circle cx="150" cy="700" r="731" stroke="#3a9ea4" stroke-width="7" stroke-opacity="0.09"></circle>
+          <circle cx="150" cy="700" r="603" stroke="#5fb3b3" stroke-width="4" stroke-opacity="0.06"></circle>
+          <circle cx="150" cy="700" r="726" stroke="#8fd3cb" stroke-width="6" stroke-opacity="0.03"></circle>
+          <circle cx="150" cy="700" r="677" stroke="#1e8f8a" stroke-width="4" stroke-opacity="0.05"></circle>
+          <circle cx="150" cy="700" r="684" stroke="#1e8f8a" stroke-width="33" stroke-opacity="0.06"></circle>
+          <circle cx="150" cy="700" r="675" stroke="#8fd3cb" stroke-width="9" stroke-opacity="0.04"></circle>
+          <circle cx="150" cy="700" r="742" stroke="#3a9ea4" stroke-width="11" stroke-opacity="0.04"></circle>
+          <circle cx="150" cy="700" r="708" stroke="#3a9ea4" stroke-width="10" stroke-opacity="0.09"></circle>
+          <circle cx="150" cy="700" r="736" stroke="#3a9ea4" stroke-width="6" stroke-opacity="0.03"></circle>
+          <circle cx="150" cy="700" r="582" stroke="#3a9ea4" stroke-width="33" stroke-opacity="0.04"></circle>
+          <circle cx="150" cy="700" r="701" stroke="#5fb3b3" stroke-width="17" stroke-opacity="0.08"></circle>
+          <circle cx="150" cy="700" r="658" stroke="#3a9ea4" stroke-width="9" stroke-opacity="0.07"></circle>
+          <circle cx="150" cy="700" r="574" stroke="#1e8f8a" stroke-width="18" stroke-opacity="0.07"></circle>
+          <circle cx="150" cy="700" r="683" stroke="#2ac1b0" stroke-width="12" stroke-opacity="0.08"></circle>
+          <circle cx="150" cy="700" r="601" stroke="#2ac1b0" stroke-width="6" stroke-opacity="0.05"></circle>
+          <circle cx="150" cy="700" r="610" stroke="#2ac1b0" stroke-width="9" stroke-opacity="0.05"></circle>
+          <circle cx="150" cy="700" r="674" stroke="#1e8f8a" stroke-width="7" stroke-opacity="0.03"></circle>
+        </g></g></g>
+      </svg>
       <div style="{{ skillsHeadStyle }}">
         <span style="{{ sectionLabelStyle }}">Mein Ansatz</span>
         <h2 id="ansatz-title" style="{{ introH2Style }}"><span style="{{ h2AccentStyle }}">Vom ersten Klick</span> bis zum <em style="{{ h2EmStyle }}">passenden Kurs.</em></h2>
@@ -445,12 +497,16 @@ class Component extends DCLogic {
       /* "Mein Ansatz": label + headline (teal / petrol / italic) + three white rounded cards with teal line icons */
       introStyle: {
         position: "relative", zIndex: 1,
-        backgroundColor: "var(--surface-sunken)", borderRadius: m ? 28 : 40,
+        backgroundColor: "var(--surface-sunken)", borderRadius: m ? 28 : 40, overflow: "hidden",
         display: "flex", flexDirection: "column", gap: m ? 32 : 48,
         padding: m ? "60px 24px 56px 24px" : "104px 72px 96px 72px",
         alignItems: "flex-start",
       },
-      skillsHeadStyle: { display: "flex", flexDirection: "column", gap: m ? 12 : 16 },
+      ansatzSwooshStyle: {
+        position: "absolute", top: 0, right: 0, zIndex: 0, pointerEvents: "none",
+        width: m ? "100%" : "min(52%, 760px)", height: m ? 320 : 560, opacity: m ? 0.7 : 1,
+      },
+      skillsHeadStyle: { position: "relative", zIndex: 1, display: "flex", flexDirection: "column", gap: m ? 12 : 16 },
       sectionLabelStyle: label,
       introH2Style: Object.assign({}, headline, {
         fontWeight: 500,
@@ -465,11 +521,11 @@ class Component extends DCLogic {
       },
       /* tiles modelled on "Warum Edtelligent?": white rounded cards on a faint, radially faded grid;
          big light-grey "01." numbers (decorative, aria-hidden), small icon chip, two-line title (regular + bold italic) */
-      stepsWrapStyle: { position: "relative", width: "100%" },
+      stepsWrapStyle: { position: "relative", zIndex: 1, width: "100%" },
       stepsGridBgStyle: {
-        position: "absolute", inset: m ? "-24px -24px" : "-56px -72px", zIndex: 0, pointerEvents: "none",
-        backgroundImage: "linear-gradient(#d9e0e3 1px, transparent 1px), linear-gradient(90deg, #d9e0e3 1px, transparent 1px)",
-        backgroundSize: m ? "64px 64px" : "96px 96px", backgroundPosition: "center",
+        position: "absolute", inset: m ? "-24px -24px" : "-64px -72px", zIndex: 0, pointerEvents: "none",
+        backgroundImage: "linear-gradient(#dfe6e7 2px, transparent 2px), linear-gradient(90deg, #dfe6e7 2px, transparent 2px)",
+        backgroundSize: m ? "72px 72px" : "112px 112px", backgroundPosition: "center",
         WebkitMaskImage: "radial-gradient(ellipse at center, #000 35%, transparent 72%)",
         maskImage: "radial-gradient(ellipse at center, #000 35%, transparent 72%)",
       },
@@ -495,6 +551,7 @@ class Component extends DCLogic {
         marginBottom: 12,
       },
       toolsRowStyle: {
+        position: "relative", zIndex: 1,
         display: "flex", flexDirection: m ? "column" : "row", flexWrap: "wrap",
         alignItems: m ? "flex-start" : "center", gap: m ? 12 : "12px 20px", width: "100%",
       },
@@ -515,6 +572,7 @@ class Component extends DCLogic {
       eyebrowStyle: Object.assign({}, label, { whiteSpace: "nowrap" }),
       /* Contact: rounded petrol card, teal label, white headline; white mail button + outlined phone, both turn teal on hover */
       ctaStyle: {
+        position: "relative", zIndex: 1,
         display: "flex", flexDirection: m ? "column" : "row", flexWrap: "wrap",
         alignItems: m ? "flex-start" : "center", justifyContent: "space-between",
         gap: m ? 18 : "16px 32px", width: "100%", boxSizing: "border-box",
