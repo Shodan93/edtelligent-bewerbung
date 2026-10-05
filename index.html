@@ -58,37 +58,28 @@
     .toc a:hover { color: var(--teal-ink); text-decoration: underline; text-decoration-color: var(--teal); }
     [id] { scroll-margin-top: 24px; }
     .video-tile { cursor: pointer; }
-    /* buttons: petrol pill with white text; hover/focus = brand teal with petrol text (5.6:1) */
-    .btn-pill, .cta-mail, .cta-phone, .vt-play { transition: background-color .2s ease, color .2s ease, border-color .2s ease; }
+    /* buttons: petrol pill with white text; hover/focus = instant swap to brand teal with petrol text (5.6:1), no transition */
     .cta-mail:hover, .cta-mail:focus-visible, .cta-phone:hover, .cta-phone:focus-visible { background-color: var(--teal) !important; color: var(--ink-900) !important; border-color: var(--teal) !important; }
     .cta-mail:focus-visible, .cta-phone:focus-visible { outline: 2px solid #ffffff; outline-offset: 3px; }
     .btn-pill:hover, .btn-pill:focus-visible { background-color: var(--teal) !important; color: var(--ink-900) !important; }
     .btn-pill:focus-visible { outline: 3px solid var(--ink-900); outline-offset: 3px; }
-    /* preview hover: the teal play button turns white */
+    /* preview hover: the teal play button turns white, instantly */
     .video-tile:hover .vt-play, .video-tile:focus-visible .vt-play { background-color: #ffffff !important; }
     /* small utility links under the walkthrough CTA */
     .util-link:hover { color: var(--ink-700) !important; text-decoration-color: var(--ink-900) !important; }
     .util-link:focus-visible { outline: 2px solid var(--ink-900); outline-offset: 3px; }
     .video-tile:focus-visible { outline: 3px solid var(--ink-900); outline-offset: 3px; }
-    @media (prefers-reduced-motion: reduce) { .btn-pill, .cta-mail, .cta-phone, .vt-play { transition: none; } }
   </style>
 </helmet>
 <div style="{{ pageStyle }}">
 
   <div style="{{ heroIntroWrapStyle }}">
-    <!-- decorative teal brush bands, echoing the swooshes on edtelligent.de -->
+    <!-- decorative flat teal bands, echoing the swooshes on edtelligent.de (no gradient) -->
     <svg style="{{ swooshStyle }}" viewBox="0 0 900 560" preserveAspectRatio="xMaxYMin slice" aria-hidden="true" focusable="false">
-      <defs>
-        <linearGradient id="swooshFade" x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0" stop-color="#2ac1b0" stop-opacity="0"></stop>
-          <stop offset="0.5" stop-color="#2ac1b0" stop-opacity="0.5"></stop>
-          <stop offset="1" stop-color="#1e8f8a" stop-opacity="0.85"></stop>
-        </linearGradient>
-      </defs>
-      <path d="M120 560 C 380 470, 600 300, 900 110 L900 185 C 640 360, 430 495, 230 560 Z" fill="url(#swooshFade)" opacity="0.3"></path>
-      <path d="M260 560 C 480 475, 680 345, 900 205 L900 248 C 700 380, 520 485, 330 560 Z" fill="url(#swooshFade)" opacity="0.2"></path>
-      <path d="M40 560 C 330 455, 560 270, 900 40 L900 78 C 600 290, 380 455, 110 560 Z" fill="url(#swooshFade)" opacity="0.16"></path>
-      <path d="M380 560 C 560 492, 740 392, 900 295 L900 322 C 760 415, 600 505, 430 560 Z" fill="url(#swooshFade)" opacity="0.13"></path>
+      <path d="M120 560 C 380 470, 600 300, 900 110 L900 185 C 640 360, 430 495, 230 560 Z" fill="#2ac1b0" opacity="0.16"></path>
+      <path d="M260 560 C 480 475, 680 345, 900 205 L900 248 C 700 380, 520 485, 330 560 Z" fill="#2ac1b0" opacity="0.11"></path>
+      <path d="M40 560 C 330 455, 560 270, 900 40 L900 78 C 600 290, 380 455, 110 560 Z" fill="#1e8f8a" opacity="0.09"></path>
+      <path d="M380 560 C 560 492, 740 392, 900 295 L900 322 C 760 415, 600 505, 430 560 Z" fill="#2ac1b0" opacity="0.08"></path>
     </svg>
 
     <header style="{{ heroStyle }}">
@@ -565,11 +556,10 @@ class Component extends DCLogic {
         backgroundSize: "cover", backgroundPosition: "center",
         display: "flex", alignItems: "center", justifyContent: "center",
       },
-      /* brand-teal play button with petrol triangle (5.6:1); hover turns it white */
+      /* flat brand-teal play button with petrol triangle (5.6:1); hover turns it white */
       playIconStyle: {
         width: m ? 68 : 92, height: m ? 68 : 92, borderRadius: "50%", flexShrink: 0,
         backgroundColor: "var(--teal)",
-        boxShadow: "0 8px 24px rgba(30,55,65,0.22)",
         display: "flex", alignItems: "center", justifyContent: "center",
       },
       playIconSvgSize: m ? 36 : 48,
