@@ -123,23 +123,29 @@
         <h2 id="ansatz-title" style="{{ introH2Style }}"><span style="{{ h2AccentStyle }}">Vom ersten Klick</span> bis zum <em style="{{ h2EmStyle }}">passenden Kurs.</em></h2>
         <p style="{{ approachLeadStyle }}">Bei GenauMeinKurs entsteht Wachstum entlang eines Funnels: Menschen finden die Plattform, beantworten ein paar Fragen und landen beim passenden Bildungsträger. Genau dort setze ich an:</p>
       </div>
-      <ol style="{{ stepsStyle }}">
-        <li style="{{ stepStyle }}">
-          <div style="{{ stepTopStyle }}"><span style="{{ stepNumStyle }}">01</span><svg width="{{ stepIconSize }}" height="{{ stepIconSize }}" viewBox="0 0 48 48" fill="none" stroke="#007d73" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="20" cy="20" r="13"></circle><path d="m30 30 12 12"></path><path d="M14 20h12M20 14v12" stroke="#2ac1b0"></path></svg></div>
-          <h3 style="{{ skillTitleStyle }}">Sichtbar werden.</h3>
-          <p style="{{ skillTextStyle }}">SEO, Content &amp; GEO: Suchpotenziale finden, Ratgeber-Content skalierbar aufbauen und dafür sorgen, dass Weiterbildungen auch in KI-Antworten von ChatGPT, Gemini &amp; Co. auftauchen.</p>
-        </li>
-        <li style="{{ stepStyle }}">
-          <div style="{{ stepTopStyle }}"><span style="{{ stepNumStyle }}">02</span><svg width="{{ stepIconSize }}" height="{{ stepIconSize }}" viewBox="0 0 48 48" fill="none" stroke="#007d73" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h38L28 25v14l-8 4V25z"></path><path d="M14 13h20" stroke="#2ac1b0"></path></svg></div>
-          <h3 style="{{ skillTitleStyle }}">Leads qualifizieren.</h3>
-          <p style="{{ skillTextStyle }}">Nutzerinteraktionen auswerten, Muster erkennen und gemeinsam mit Product und Tech Prompts, Qualifizierungslogik und User Journeys verbessern, damit bei den Bildungsträgern die richtigen Leads ankommen.</p>
-        </li>
-        <li style="{{ stepStyle }}">
-          <div style="{{ stepTopStyle }}"><span style="{{ stepNumStyle }}">03</span><svg width="{{ stepIconSize }}" height="{{ stepIconSize }}" viewBox="0 0 48 48" fill="none" stroke="#007d73" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 42h38"></path><rect x="8" y="30" width="7" height="12" rx="1.5"></rect><rect x="20.5" y="22" width="7" height="20" rx="1.5"></rect><rect x="33" y="12" width="7" height="30" rx="1.5"></rect><path d="M7 21 18 11l7 5L38 5" stroke="#2ac1b0"></path><path d="M32 5h6v6" stroke="#2ac1b0"></path></svg></div>
-          <h3 style="{{ skillTitleStyle }}">Performance steuern.</h3>
-          <p style="{{ skillTextStyle }}">KPIs festlegen, Paid-Kampagnen in Google und Meta steuern, sauber mit GA4 messen und aus A/B&#8209;Tests konkrete Optimierungen für Kosten pro Lead und Conversion ableiten.</p>
-        </li>
-      </ol>
+      <div style="{{ stepsWrapStyle }}">
+        <div style="{{ stepsGridBgStyle }}" aria-hidden="true"></div>
+        <ol style="{{ stepsStyle }}">
+          <li style="{{ stepStyle }}">
+            <span style="{{ stepNumStyle }}" aria-hidden="true">01.</span>
+            <span style="{{ stepChipStyle }}" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 48 48" fill="none" stroke="#007d73" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="14"></circle><path d="m31 31 12 12"></path></svg></span>
+            <h3 style="{{ skillTitleStyle }}">Sichtbar werden. <em style="{{ skillTitleEmStyle }}">SEO, Content &amp; GEO</em></h3>
+            <p style="{{ skillTextStyle }}">Suchpotenziale finden, Ratgeber-Content skalierbar aufbauen und dafür sorgen, dass Weiterbildungen auch in KI-Antworten von ChatGPT, Gemini &amp; Co. auftauchen.</p>
+          </li>
+          <li style="{{ stepStyle }}">
+            <span style="{{ stepNumStyle }}" aria-hidden="true">02.</span>
+            <span style="{{ stepChipStyle }}" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 48 48" fill="none" stroke="#007d73" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h38L28 25v14l-8 4V25z"></path></svg></span>
+            <h3 style="{{ skillTitleStyle }}">Leads qualifizieren. <em style="{{ skillTitleEmStyle }}">KI im Funnel</em></h3>
+            <p style="{{ skillTextStyle }}">Nutzerinteraktionen auswerten, Muster erkennen und gemeinsam mit Product und Tech Prompts, Qualifizierungslogik und User Journeys verbessern, damit bei den Bildungsträgern die richtigen Leads ankommen.</p>
+          </li>
+          <li style="{{ stepStyle }}">
+            <span style="{{ stepNumStyle }}" aria-hidden="true">03.</span>
+            <span style="{{ stepChipStyle }}" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 48 48" fill="none" stroke="#007d73" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 40 18 26l8 7L43 12"></path><path d="M33 12h10v10"></path></svg></span>
+            <h3 style="{{ skillTitleStyle }}">Performance steuern. <em style="{{ skillTitleEmStyle }}">Paid &amp; KPIs</em></h3>
+            <p style="{{ skillTextStyle }}">KPIs festlegen, Paid-Kampagnen in Google und Meta steuern, sauber mit GA4 messen und aus A/B&#8209;Tests konkrete Optimierungen für Kosten pro Lead und Conversion ableiten.</p>
+          </li>
+        </ol>
+      </div>
       <div style="{{ toolsRowStyle }}">
         <span style="{{ sectionLabelStyle }}">Tools</span>
         <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Google Ads</li><li style="{{ toolChipStyle }}">Meta Ads</li><li style="{{ toolChipStyle }}">GA4</li><li style="{{ toolChipStyle }}">Google Tag Manager</li><li style="{{ toolChipStyle }}">n8n</li><li style="{{ toolChipStyle }}">Claude Code</li><li style="{{ toolChipStyle }}">Shopify</li><li style="{{ toolChipStyle }}">WordPress + WooCommerce</li><li style="{{ toolChipStyle }}">JTL-Shop</li><li style="{{ toolChipStyle }}">Figma</li><li style="{{ toolChipStyle }}">Photoshop CC</li></ul>
@@ -439,7 +445,7 @@ class Component extends DCLogic {
       /* "Mein Ansatz": label + headline (teal / petrol / italic) + three white rounded cards with teal line icons */
       introStyle: {
         position: "relative", zIndex: 1,
-        backgroundColor: "var(--surface-sunken)",
+        backgroundColor: "var(--surface-sunken)", borderRadius: m ? 28 : 40,
         display: "flex", flexDirection: "column", gap: m ? 32 : 48,
         padding: m ? "60px 24px 56px 24px" : "104px 72px 96px 72px",
         alignItems: "flex-start",
@@ -447,35 +453,47 @@ class Component extends DCLogic {
       skillsHeadStyle: { display: "flex", flexDirection: "column", gap: m ? 12 : 16 },
       sectionLabelStyle: label,
       introH2Style: Object.assign({}, headline, {
+        fontWeight: 500,
         fontSize: m ? "calc((100vw - 48px) / 10.5)" : "min(52px, calc((100vw - 144px) / 23))",
         lineHeight: 1.1, maxWidth: 1240,
       }),
       h2AccentStyle: { color: accent },
-      h2EmStyle: { fontStyle: "italic", fontWeight: 500, color: strong },
+      h2EmStyle: { fontStyle: "italic", fontWeight: 700, color: strong },
       approachLeadStyle: {
         fontFamily: font, fontWeight: 400, fontSize: m ? 17 : 18.5, lineHeight: 1.6,
         color: bodyText, margin: m ? "4px 0 0 0" : "6px 0 0 0", maxWidth: 1000,
       },
+      /* tiles modelled on "Warum Edtelligent?": white rounded cards on a faint, radially faded grid;
+         big light-grey "01." numbers (decorative, aria-hidden), small icon chip, two-line title (regular + bold italic) */
+      stepsWrapStyle: { position: "relative", width: "100%" },
+      stepsGridBgStyle: {
+        position: "absolute", inset: m ? "-24px -24px" : "-56px -72px", zIndex: 0, pointerEvents: "none",
+        backgroundImage: "linear-gradient(#d9e0e3 1px, transparent 1px), linear-gradient(90deg, #d9e0e3 1px, transparent 1px)",
+        backgroundSize: m ? "64px 64px" : "96px 96px", backgroundPosition: "center",
+        WebkitMaskImage: "radial-gradient(ellipse at center, #000 35%, transparent 72%)",
+        maskImage: "radial-gradient(ellipse at center, #000 35%, transparent 72%)",
+      },
       stepsStyle: m ? {
-        listStyle: "none", margin: 0, padding: 0,
+        position: "relative", zIndex: 1, listStyle: "none", margin: 0, padding: 0,
         display: "flex", flexDirection: "column", gap: 16, width: "100%",
       } : {
-        listStyle: "none", margin: 0, padding: 0,
+        position: "relative", zIndex: 1, listStyle: "none", margin: 0, padding: 0,
         display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 24, width: "100%",
       },
       stepStyle: {
-        display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 12,
+        display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 0,
         backgroundColor: "var(--white)", borderRadius: 24,
-        padding: m ? "24px 22px 26px 22px" : "32px 32px 36px 32px",
-      },
-      stepTopStyle: {
-        display: "flex", alignItems: "center", justifyContent: "space-between",
-        width: "100%", marginBottom: m ? 4 : 10,
+        padding: m ? "24px 22px 28px 22px" : "30px 32px 36px 32px",
       },
       stepNumStyle: Object.assign({}, headline, {
-        fontWeight: 500, fontSize: m ? 40 : 50, lineHeight: 1, color: accent,
+        fontWeight: 500, fontSize: m ? 52 : 64, lineHeight: 1, letterSpacing: "-0.05em",
+        color: "#dfe5e7", marginBottom: m ? 28 : 48,
       }),
-      stepIconSize: m ? 38 : 44,
+      stepChipStyle: {
+        display: "inline-flex", alignItems: "center", justifyContent: "center",
+        width: 30, height: 30, borderRadius: 9, backgroundColor: "#f1f5f5", border: "1px solid #e3eaea",
+        marginBottom: 12,
+      },
       toolsRowStyle: {
         display: "flex", flexDirection: m ? "column" : "row", flexWrap: "wrap",
         alignItems: m ? "flex-start" : "center", gap: m ? 12 : "12px 20px", width: "100%",
@@ -487,8 +505,9 @@ class Component extends DCLogic {
         border: "1px solid var(--border-subtle)", borderRadius: 999, padding: m ? "7px 14px" : "7px clamp(9px, 0.8vw, 11px)",
       },
       skillTitleStyle: Object.assign({}, headline, {
-        fontSize: m ? 20 : 22, lineHeight: 1.2, letterSpacing: "-0.03em", margin: "4px 0 0 0",
+        fontWeight: 400, fontSize: m ? 22 : 24, lineHeight: 1.15, letterSpacing: "-0.035em", margin: "0 0 14px 0",
       }),
+      skillTitleEmStyle: { display: "block", fontStyle: "italic", fontWeight: 700 },
       skillTextStyle: {
         fontFamily: font, fontWeight: 400, fontSize: m ? 16 : 16.5, lineHeight: 1.6,
         color: bodyText, margin: 0,
@@ -643,7 +662,7 @@ class Component extends DCLogic {
 
       case2Style: {
         position: "relative",
-        backgroundColor: "var(--surface-sunken)",
+        backgroundColor: "var(--surface-sunken)", borderRadius: m ? 28 : 40, marginBottom: m ? 16 : 24,
         display: "flex", flexDirection: "column",
         gap: m ? 24 : 20,
         padding: m ? "56px 24px 60px 24px" : "88px 72px 104px 72px",
