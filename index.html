@@ -659,7 +659,7 @@ class Component extends DCLogic {
       /* contact card now sits on the white page between the skills panel and case 01 */
       ctaWrapStyle: {
         position: "relative", zIndex: 1, backgroundColor: paper,
-        padding: m ? "8px 24px 0 24px" : "16px 72px 0 72px",
+        padding: m ? "32px 24px 0 24px" : "56px 72px 0 72px", /* + the card's own marginTop = 40 / 72px above, same as below */
       },
       toolGroupsStyle: m ? {
         display: "flex", flexDirection: "column", gap: 12, width: "100%",
@@ -744,7 +744,7 @@ class Component extends DCLogic {
       einblickeStyle: {
         position: "relative", zIndex: 1, backgroundColor: paper,
         display: "flex", flexDirection: "column",
-        padding: m ? "64px 24px 0 24px" : "88px 72px 0 72px",
+        padding: m ? "40px 24px 0 24px" : "72px 72px 0 72px", /* same gap below the contact card as above it */
       },
       case1Style: {
         position: "relative", zIndex: 1,
