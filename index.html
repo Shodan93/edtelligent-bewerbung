@@ -89,7 +89,7 @@
     <header style="{{ heroStyle }}">
       <div style="{{ heroTopRowStyle }}">
         <img src="assets/edtelligent-logo.svg" alt="EDTELLIGENT" width="237" height="42" style="{{ heroLogoStyle }}" />
-        <nav aria-label="Inhalt" class="toc" style="{{ navStyle }}"><a href="#ueber-mich">Über mich</a><a href="#ansatz">Ansatz</a><a href="#plan">90 Tage</a><a href="#royalshrimp">Case RoyalShrimp</a><a href="#cuply">Case Cuply</a><a href="#ai-experimente">AI-Experimente</a><a href="#kontakt">Kontakt</a></nav>
+        <nav aria-label="Inhalt" class="toc" style="{{ navStyle }}"><a href="#ueber-mich">Über mich</a><a href="#ansatz">Ansatz</a><a href="#royalshrimp">Case RoyalShrimp</a><a href="#cuply">Case Cuply</a><a href="#ai-experimente">AI-Experimente</a><a href="#kontakt">Kontakt</a></nav>
       </div>
       <div style="{{ heroTextStyle }}">
         <p style="{{ heroKickerStyle }}">Svenja Mumelter · Bewerbung als Growth Marketing Managerin</p>
@@ -177,7 +177,7 @@
       <div style="{{ skillsHeadStyle }}">
         <span style="{{ sectionLabelStyle }}">Mein Ansatz</span>
         <h2 id="ansatz-title" style="{{ introH2Style }}"><span style="{{ h2AccentStyle }}">Vom ersten Klick</span> bis zum <em style="{{ h2EmStyle }}">passenden Kurs.</em></h2>
-        <p style="{{ approachLeadStyle }}">GenauMeinKurs bringt Menschen, die eine Weiterbildung suchen, mit passenden Bildungsträgern zusammen, und Bildungsträger zahlen pro qualifiziertem Lead. Wachstum heißt deshalb: mehr passende Menschen erreichen und daraus Leads machen, die wirklich wertvoll sind. Genau dort setze ich an:</p>
+        <p style="{{ approachLeadStyle }}">GenauMeinKurs bringt Menschen, die eine Weiterbildung suchen, mit passenden Bildungsträgern zusammen. Wachstum heißt deshalb: mehr passende Menschen erreichen und daraus Anfragen machen, die für Bildungsträger wirklich wertvoll sind. Genau dort setze ich an:</p>
       </div>
       <div style="{{ stepsWrapStyle }}">
         <div style="{{ stepsGridBgStyle }}" aria-hidden="true"></div>
@@ -249,33 +249,6 @@
 
   </div>
 
-  <section id="plan" aria-labelledby="plan-title" style="{{ planStyle }}">
-    <div style="{{ skillsHeadStyle }}">
-      <span style="{{ sectionLabelStyle }}">Meine ersten 90 Tage bei Edtelligent</span>
-      <h2 id="plan-title" style="{{ introH2Style }}"><span style="{{ h2AccentStyle }}">Verstehen.</span> Testen. <em style="{{ h2EmStyle }}">Skalieren.</em></h2>
-      <p style="{{ approachLeadStyle }}">Mein Ansatz: erst verstehen, dann testen, messen und erfolgreiche Maßnahmen skalieren.</p>
-    </div>
-    <ol style="{{ phasesStyle }}">
-      <li style="{{ phaseStyle }}">
-        <div style="{{ phaseMarkRowStyle }}" aria-hidden="true"><span style="{{ phaseDotStyle }}"></span><span style="{{ phaseLineStyle }}"></span></div>
-        <span style="{{ phasePillStyle }}">Tage 1–30</span>
-        <h3 style="{{ phaseTitleStyle }}">Verstehen und <em style="{{ skillTitleEmStyle }}">Datenbasis schaffen</em></h3>
-        <p style="{{ phaseTextStyle }}">GenauMeinKurs, Zielgruppen und Customer Journey vollständig verstehen. Trafficquellen, Landingpages und Funnelstufen analysieren und gemeinsam mit Product, Tech und der Performance-Agentur nachvollziehen, welche Kanäle nicht nur Leads, sondern relevante Leads erzeugen. Erste Potenziale in SEO, GEO, Content und Conversion identifizieren.</p>
-      </li>
-      <li style="{{ phaseStyle }}">
-        <div style="{{ phaseMarkRowStyle }}" aria-hidden="true"><span style="{{ phaseDotStyle }}"></span><span style="{{ phaseLineStyle }}"></span></div>
-        <span style="{{ phasePillStyle }}">Tage 31–60</span>
-        <h3 style="{{ phaseTitleStyle }}">Testen und <em style="{{ skillTitleEmStyle }}">optimieren</em></h3>
-        <p style="{{ phaseTextStyle }}">Erste priorisierte Growth-Experimente umsetzen. Landingpages und Content entlang konkreter Suchintentionen optimieren, Nutzerführung und Conversion-Punkte testen und Erkenntnisse zur Leadqualität in die Paid-Steuerung zurückführen. KI gezielt für Recherche, Content-Workflows und Qualifizierungsprozesse einsetzen.</p>
-      </li>
-      <li style="{{ phaseStyle }}">
-        <div style="{{ phaseMarkRowStyle }}" aria-hidden="true"><span style="{{ phaseDotStyle }}"></span><span style="{{ phaseLineEndStyle }}"></span></div>
-        <span style="{{ phasePillStyle }}">Tage 61–90</span>
-        <h3 style="{{ phaseTitleStyle }}">Lernen <em style="{{ skillTitleEmStyle }}">skalieren</em></h3>
-        <p style="{{ phaseTextStyle }}">Erfolgreiche Maßnahmen anhand klarer KPIs bewerten und skalieren. Wiederholbare SEO- und GEO-Prozesse entwickeln, erfolgreiche Landingpage-Muster ausbauen und gemeinsam mit Product und Tech weitere Optimierungen für Matching, Qualifizierung und User Journey priorisieren.</p>
-      </li>
-    </ol>
-  </section>
 
   <div id="royalshrimp" style="{{ case1Style }}">
     <div style="{{ headerStyle }}">
@@ -409,7 +382,6 @@
           <span style="{{ footerColHeadStyle }}">Auf dieser Seite</span>
           <a href="#ueber-mich" class="footer-link" style="{{ footerLinkStyle }}">Über mich</a>
           <a href="#ansatz" class="footer-link" style="{{ footerLinkStyle }}">Ansatz</a>
-          <a href="#plan" class="footer-link" style="{{ footerLinkStyle }}">90 Tage</a>
           <a href="#royalshrimp" class="footer-link" style="{{ footerLinkStyle }}">Case RoyalShrimp</a>
           <a href="#cuply" class="footer-link" style="{{ footerLinkStyle }}">Case Cuply</a>
           <a href="#ai-experimente" class="footer-link" style="{{ footerLinkStyle }}">AI-Experimente</a>
@@ -739,35 +711,6 @@ class Component extends DCLogic {
         fontFamily: font, fontWeight: 600, fontSize: 16,
         textDecoration: "none", whiteSpace: "nowrap", boxSizing: "border-box",
       },
-      /* 90-day plan: white section, three phases on a horizontal timeline (teal dots + hairline); plain stacked list on mobile */
-      planStyle: {
-        position: "relative", zIndex: 1, backgroundColor: paper,
-        display: "flex", flexDirection: "column", gap: m ? 32 : 56,
-        padding: m ? "64px 24px 24px 24px" : "112px 72px 32px 72px",
-      },
-      phasesStyle: m ? {
-        listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 36, width: "100%",
-      } : {
-        listStyle: "none", margin: 0, padding: 0, display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 40, width: "100%",
-      },
-      phaseStyle: { display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 12, minWidth: 0 },
-      phaseMarkRowStyle: { display: m ? "none" : "flex", alignItems: "center", width: "calc(100% + 40px)", marginBottom: 12 },
-      phaseDotStyle: { width: 14, height: 14, borderRadius: "50%", backgroundColor: "var(--teal)", flexShrink: 0, boxSizing: "border-box", border: "3px solid #d4f2ee" },
-      phaseLineStyle: { flex: 1, height: 2, backgroundColor: "var(--border-subtle)" },
-      phaseLineEndStyle: { flex: 1, height: 2, backgroundImage: "linear-gradient(90deg, var(--border-subtle), transparent)" },
-      phasePillStyle: {
-        display: "inline-flex", alignItems: "center", height: 30, padding: "0 14px", borderRadius: 999,
-        backgroundColor: "#e6f6f4", color: ink,
-        fontFamily: font, fontWeight: 600, fontSize: 14, letterSpacing: "0.01em",
-      },
-      phaseTitleStyle: Object.assign({}, headline, {
-        fontWeight: 400, fontSize: m ? 23 : 26, lineHeight: 1.15, letterSpacing: "-0.035em", margin: "4px 0 2px 0",
-      }),
-      phaseTextStyle: {
-        fontFamily: font, fontWeight: 400, fontSize: m ? 16 : 16.5, lineHeight: 1.65,
-        color: bodyText, margin: 0,
-      },
-
       case1Style: {
         position: "relative", zIndex: 1,
         backgroundColor: paper,
