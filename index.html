@@ -214,6 +214,10 @@
             <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Google Ads</li><li style="{{ toolChipStyle }}">Meta Ads</li><li style="{{ toolChipStyle }}">TikTok Ads</li><li style="{{ toolChipStyle }}">LinkedIn Ads</li><li style="{{ toolChipStyle }}">Performance Max</li><li style="{{ toolChipStyle }}">Advantage+</li><li style="{{ toolChipStyle }}">Gebotsstrategien</li><li style="{{ toolChipStyle }}">Conversion-Tracking</li><li style="{{ toolChipStyle }}">Remarketing</li><li style="{{ toolChipStyle }}">Consent Mode V2</li></ul>
           </div>
           <div style="{{ toolGroupStyle }}">
+            <h3 style="{{ toolGroupTitleStyle }}">Landingpages &amp; <em style="{{ toolGroupEmStyle }}">Conversion</em></h3>
+            <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Seitenstruktur</li><li style="{{ toolChipStyle }}">Landingpage-Aufbau</li><li style="{{ toolChipStyle }}">Message Match</li><li style="{{ toolChipStyle }}">Mobile-Optimierung</li><li style="{{ toolChipStyle }}">Conversion-Optimierung</li></ul>
+          </div>
+          <div style="{{ toolGroupStyle }}">
             <h3 style="{{ toolGroupTitleStyle }}">Webanalyse &amp; <em style="{{ toolGroupEmStyle }}">Tracking</em></h3>
             <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">GA4</li><li style="{{ toolChipStyle }}">Google Tag Manager</li><li style="{{ toolChipStyle }}">Looker Studio</li><li style="{{ toolChipStyle }}">Microsoft Clarity</li><li style="{{ toolChipStyle }}">Event-Tracking</li><li style="{{ toolChipStyle }}">DSGVO-konformes Tracking</li></ul>
           </div>
@@ -225,7 +229,7 @@
             <h3 style="{{ toolGroupTitleStyle }}">KI &amp; <em style="{{ toolGroupEmStyle }}">Automatisierung</em></h3>
             <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">ChatGPT</li><li style="{{ toolChipStyle }}">Claude</li><li style="{{ toolChipStyle }}">Claude Code</li><li style="{{ toolChipStyle }}">Gemini</li><li style="{{ toolChipStyle }}">Perplexity</li><li style="{{ toolChipStyle }}">n8n</li></ul>
           </div>
-          <div style="{{ toolGroupStyle }}">
+          <div style="{{ toolGroupWideStyle }}">
             <h3 style="{{ toolGroupTitleStyle }}">Shop &amp; <em style="{{ toolGroupEmStyle }}">Design</em></h3>
             <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Shopify</li><li style="{{ toolChipStyle }}">WordPress + WooCommerce</li><li style="{{ toolChipStyle }}">JTL-Shop</li><li style="{{ toolChipStyle }}">Figma</li><li style="{{ toolChipStyle }}">Photoshop CC</li></ul>
           </div>
@@ -634,6 +638,12 @@ class Component extends DCLogic {
         display: "flex", flexDirection: "column", gap: m ? 12 : 14, minWidth: 0,
         backgroundColor: "var(--white)", borderRadius: 20,
         padding: m ? "20px 20px 22px 20px" : "24px 28px 26px 28px",
+      },
+      toolGroupWideStyle: {
+        display: "flex", flexDirection: "column", gap: m ? 12 : 14, minWidth: 0,
+        backgroundColor: "var(--white)", borderRadius: 20,
+        padding: m ? "20px 20px 22px 20px" : "24px 28px 26px 28px",
+        gridColumn: "1 / -1", /* odd number of groups: the last card closes the grid over the full width */
       },
       toolGroupTitleStyle: Object.assign({}, headline, {
         fontWeight: 400, fontSize: m ? 19 : 20, lineHeight: 1.2, letterSpacing: "-0.03em",
