@@ -118,7 +118,7 @@
       </dl>
       <aside aria-label="Persönlicher Bezug" style="{{ bezugStyle }}">
         <span style="{{ bezugLabelStyle }}">Persönlicher Bezug</span>
-        <p style="{{ bezugTextStyle }}">Den Weiterbildungsmarkt kenne ich auch als <em style="{{ bezugEmStyle }}">Nutzerin.</em> Meine eigene Weiterbildung habe ich bei der ecomex Business Academy absolviert, die ihr auch auf GenauMeinKurs listet.</p>
+        <p style="{{ bezugTextStyle }}">Den Weiterbildungsmarkt kenne ich auch als <em style="{{ bezugEmStyle }}">Nutzerin.</em> Meine eigene Weiterbildung habe ich bei der ecomex&nbsp;Business&nbsp;Academy absolviert, die ihr auch auf GenauMeinKurs listet.</p>
       </aside>
     </section>
 
@@ -564,14 +564,14 @@ class Component extends DCLogic {
       factStyle: { display: "flex", flexDirection: "column", gap: 6, minWidth: 0 },
       /* "Persönlicher Bezug" (ecomex): rounded light card with a teal edge, regular + bold-italic lead-in like edtelligent.de */
       bezugStyle: {
-        display: "flex", flexDirection: "column", gap: 8, width: "100%", boxSizing: "border-box",
+        display: "flex", flexDirection: "column", gap: 8, width: m ? "100%" : "calc((100% - 56px) / 3 * 2 + 28px)", alignSelf: "flex-start", boxSizing: "border-box", /* spans exactly the first two columns of the facts grid above (3 cols, 28px gap) */
         backgroundColor: "var(--surface-sunken)", borderRadius: 24, borderLeft: "4px solid var(--teal)",
-        padding: m ? "22px 22px 24px 20px" : "28px 40px 30px 36px",
+        padding: m ? "20px 22px 22px 20px" : "22px 40px 24px 36px",
       },
       bezugLabelStyle: label,
       bezugTextStyle: {
         fontFamily: font, fontWeight: 400, fontSize: m ? 16.5 : 18, lineHeight: 1.6, letterSpacing: "-0.01em",
-        color: strong, margin: 0, maxWidth: 1060,
+        color: strong, margin: 0,
       },
       bezugEmStyle: { fontStyle: "italic", fontWeight: 700 },
       factNumStyle: Object.assign({}, headline, {
