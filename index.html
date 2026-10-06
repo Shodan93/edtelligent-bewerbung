@@ -204,7 +204,24 @@
       </div>
       <div style="{{ toolsRowStyle }}">
         <span style="{{ sectionLabelStyle }}">Tools</span>
-        <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Google Ads</li><li style="{{ toolChipStyle }}">Meta Ads</li><li style="{{ toolChipStyle }}">GA4</li><li style="{{ toolChipStyle }}">Google Tag Manager</li><li style="{{ toolChipStyle }}">n8n</li><li style="{{ toolChipStyle }}">Claude Code</li><li style="{{ toolChipStyle }}">Shopify</li><li style="{{ toolChipStyle }}">WordPress + WooCommerce</li><li style="{{ toolChipStyle }}">JTL-Shop</li><li style="{{ toolChipStyle }}">Figma</li><li style="{{ toolChipStyle }}">Photoshop CC</li></ul>
+        <div style="{{ toolGroupsStyle }}">
+          <div style="{{ toolGroupStyle }}">
+            <h3 style="{{ toolGroupTitleStyle }}">SEO &amp; <em style="{{ toolGroupEmStyle }}">GEO</em></h3>
+            <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Google Search Console</li><li style="{{ toolChipStyle }}">Sistrix</li><li style="{{ toolChipStyle }}">Semrush</li><li style="{{ toolChipStyle }}">Ahrefs</li><li style="{{ toolChipStyle }}">Screaming Frog</li><li style="{{ toolChipStyle }}">PageSpeed Insights</li><li style="{{ toolChipStyle }}">AnswerThePublic</li></ul>
+          </div>
+          <div style="{{ toolGroupStyle }}">
+            <h3 style="{{ toolGroupTitleStyle }}">Performance &amp; <em style="{{ toolGroupEmStyle }}">Tracking</em></h3>
+            <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Google Ads</li><li style="{{ toolChipStyle }}">Meta Ads</li><li style="{{ toolChipStyle }}">GA4</li><li style="{{ toolChipStyle }}">Google Tag Manager</li></ul>
+          </div>
+          <div style="{{ toolGroupStyle }}">
+            <h3 style="{{ toolGroupTitleStyle }}">KI &amp; <em style="{{ toolGroupEmStyle }}">Automatisierung</em></h3>
+            <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">ChatGPT</li><li style="{{ toolChipStyle }}">Claude</li><li style="{{ toolChipStyle }}">Claude Code</li><li style="{{ toolChipStyle }}">n8n</li></ul>
+          </div>
+          <div style="{{ toolGroupStyle }}">
+            <h3 style="{{ toolGroupTitleStyle }}">Shop &amp; <em style="{{ toolGroupEmStyle }}">Design</em></h3>
+            <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Shopify</li><li style="{{ toolChipStyle }}">WordPress + WooCommerce</li><li style="{{ toolChipStyle }}">JTL-Shop</li><li style="{{ toolChipStyle }}">Figma</li><li style="{{ toolChipStyle }}">Photoshop CC</li></ul>
+          </div>
+        </div>
       </div>
       <section id="kontakt" aria-labelledby="kontakt-title" style="{{ ctaStyle }}">
         <div style="{{ ctaTextWrapStyle }}">
@@ -595,16 +612,30 @@ class Component extends DCLogic {
         width: 30, height: 30, borderRadius: 9, backgroundColor: "#f1f5f5", border: "1px solid #e3eaea",
         marginBottom: 12,
       },
+      /* tools: four white group cards (same order as the tiles above), title regular + bold italic, chips on light grey */
       toolsRowStyle: {
         position: "relative", zIndex: 1,
-        display: "flex", flexDirection: m ? "column" : "row", flexWrap: "wrap",
-        alignItems: m ? "flex-start" : "center", gap: m ? 12 : "12px 20px", width: "100%",
+        display: "flex", flexDirection: "column", gap: m ? 12 : 16, width: "100%",
       },
-      toolsListStyle: { listStyle: "none", margin: 0, padding: 0, display: "flex", flexWrap: "wrap", gap: m ? 8 : "clamp(5px, 0.5vw, 7px)" },
+      toolGroupsStyle: m ? {
+        display: "flex", flexDirection: "column", gap: 12, width: "100%",
+      } : {
+        display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: 20, width: "100%",
+      },
+      toolGroupStyle: {
+        display: "flex", flexDirection: "column", gap: m ? 12 : 14, minWidth: 0,
+        backgroundColor: "var(--white)", borderRadius: 20,
+        padding: m ? "20px 20px 22px 20px" : "24px 28px 26px 28px",
+      },
+      toolGroupTitleStyle: Object.assign({}, headline, {
+        fontWeight: 400, fontSize: m ? 19 : 20, lineHeight: 1.2, letterSpacing: "-0.03em",
+      }),
+      toolGroupEmStyle: { fontStyle: "italic", fontWeight: 700 },
+      toolsListStyle: { listStyle: "none", margin: 0, padding: 0, display: "flex", flexWrap: "wrap", gap: 8 },
       toolChipStyle: {
-        fontFamily: font, fontWeight: 500, fontSize: m ? 14 : "clamp(12.5px, 0.95vw, 13.5px)", lineHeight: 1.3,
-        color: strong, backgroundColor: "var(--white)",
-        border: "1px solid var(--border-subtle)", borderRadius: 999, padding: m ? "7px 14px" : "7px clamp(9px, 0.8vw, 11px)",
+        fontFamily: font, fontWeight: 500, fontSize: m ? 14 : 14, lineHeight: 1.3,
+        color: strong, backgroundColor: "var(--surface-sunken)",
+        border: "1px solid var(--border-subtle)", borderRadius: 999, padding: "7px 13px",
       },
       skillTitleStyle: Object.assign({}, headline, {
         fontWeight: 400, fontSize: m ? 22 : 24, lineHeight: 1.15, letterSpacing: "-0.035em", margin: "0 0 14px 0",
