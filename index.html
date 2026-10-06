@@ -89,7 +89,7 @@
     <header style="{{ heroStyle }}">
       <div style="{{ heroTopRowStyle }}">
         <img src="assets/edtelligent-logo.svg" alt="EDTELLIGENT" width="237" height="42" style="{{ heroLogoStyle }}" />
-        <nav aria-label="Inhalt" class="toc" style="{{ navStyle }}"><a href="#ueber-mich">Über mich</a><a href="#ansatz">Ansatz</a><a href="#royalshrimp">Case RoyalShrimp</a><a href="#cuply">Case Cuply</a><a href="#ai-experimente">AI-Experimente</a><a href="#kontakt">Kontakt</a></nav>
+        <nav aria-label="Inhalt" class="toc" style="{{ navStyle }}"><a href="#ueber-mich">Über mich</a><a href="#ansatz">Ansatz</a><a href="#skills">Skills</a><a href="#royalshrimp">Case RoyalShrimp</a><a href="#cuply">Case Cuply</a><a href="#ai-experimente">AI-Experimente</a><a href="#kontakt">Kontakt</a></nav>
       </div>
       <div style="{{ heroTextStyle }}">
         <p style="{{ heroKickerStyle }}">Svenja Mumelter · Bewerbung als Growth Marketing Managerin</p>
@@ -202,12 +202,17 @@
           </li>
         </ol>
       </div>
-      <div style="{{ toolsRowStyle }}">
+    </section>
+
+    <section id="skills" aria-labelledby="skills-title" style="{{ skillsSectionStyle }}">
+      <div style="{{ skillsHeadStyle }}">
         <span style="{{ sectionLabelStyle }}">Skills &amp; Tools</span>
-        <div style="{{ toolGroupsStyle }}">
-          <div style="{{ toolGroupStyle }}">
-            <h3 style="{{ toolGroupTitleStyle }}">Online-Marketing-<em style="{{ toolGroupEmStyle }}">Strategie</em></h3>
-            <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Business Model Canvas</li><li style="{{ toolChipStyle }}">SWOT-Analyse</li><li style="{{ toolChipStyle }}">Personas</li><li style="{{ toolChipStyle }}">Customer Journey</li><li style="{{ toolChipStyle }}">KPI-Definition</li><li style="{{ toolChipStyle }}">Budgetplanung</li></ul>
+        <h2 id="skills-title" style="{{ introH2Style }}"><span style="{{ h2AccentStyle }}">Das bringe ich</span> <em style="{{ h2EmStyle }}">mit.</em></h2>
+      </div>
+      <div style="{{ toolGroupsStyle }}">
+          <div style="{{ toolGroupWideStyle }}">
+            <h3 style="{{ toolGroupTitleStyle }}">KI &amp; <em style="{{ toolGroupEmStyle }}">Automatisierung</em></h3>
+            <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">ChatGPT &amp; Codex</li><li style="{{ toolChipStyle }}">Claude &amp; Claude Code</li><li style="{{ toolChipStyle }}">Gemini</li><li style="{{ toolChipStyle }}">Perplexity</li><li style="{{ toolChipStyle }}">n8n</li><li style="{{ toolChipStyle }}">MCPs &amp; Skills</li></ul>
           </div>
           <div style="{{ toolGroupStyle }}">
             <h3 style="{{ toolGroupTitleStyle }}">SEO &amp; <em style="{{ toolGroupEmStyle }}">GEO</em></h3>
@@ -222,33 +227,34 @@
             <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">GA4</li><li style="{{ toolChipStyle }}">Google Tag Manager</li><li style="{{ toolChipStyle }}">Looker Studio</li><li style="{{ toolChipStyle }}">Microsoft Clarity</li><li style="{{ toolChipStyle }}">Event-Tracking</li><li style="{{ toolChipStyle }}">DSGVO-konformes Tracking</li></ul>
           </div>
           <div style="{{ toolGroupStyle }}">
+            <h3 style="{{ toolGroupTitleStyle }}">CRM &amp; <em style="{{ toolGroupEmStyle }}">Marketing Automation</em></h3>
+            <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Brevo</li><li style="{{ toolChipStyle }}">Lead Scoring</li><li style="{{ toolChipStyle }}">Segmentierung</li><li style="{{ toolChipStyle }}">A/B-Testing</li></ul>
+          </div>
+          <div style="{{ toolGroupStyle }}">
             <h3 style="{{ toolGroupTitleStyle }}">Landingpages &amp; <em style="{{ toolGroupEmStyle }}">Conversion</em></h3>
             <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Seitenstruktur</li><li style="{{ toolChipStyle }}">Landingpage-Aufbau</li><li style="{{ toolChipStyle }}">Message Match</li><li style="{{ toolChipStyle }}">Mobile-Optimierung</li><li style="{{ toolChipStyle }}">Conversion-Optimierung</li></ul>
           </div>
           <div style="{{ toolGroupStyle }}">
-            <h3 style="{{ toolGroupTitleStyle }}">CRM &amp; <em style="{{ toolGroupEmStyle }}">Marketing Automation</em></h3>
-            <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Brevo</li><li style="{{ toolChipStyle }}">Lead Scoring</li><li style="{{ toolChipStyle }}">Segmentierung</li><li style="{{ toolChipStyle }}">A/B-Testing</li></ul>
+            <h3 style="{{ toolGroupTitleStyle }}">Online-Marketing-<em style="{{ toolGroupEmStyle }}">Strategie</em></h3>
+            <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Business Model Canvas</li><li style="{{ toolChipStyle }}">SWOT-Analyse</li><li style="{{ toolChipStyle }}">Personas</li><li style="{{ toolChipStyle }}">Customer Journey</li><li style="{{ toolChipStyle }}">KPI-Definition</li><li style="{{ toolChipStyle }}">Budgetplanung</li></ul>
           </div>
-          <div style="{{ toolGroupWideStyle }}">
-            <h3 style="{{ toolGroupTitleStyle }}">KI &amp; <em style="{{ toolGroupEmStyle }}">Automatisierung</em></h3>
-            <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">ChatGPT &amp; Codex</li><li style="{{ toolChipStyle }}">Claude &amp; Claude Code</li><li style="{{ toolChipStyle }}">Gemini</li><li style="{{ toolChipStyle }}">Perplexity</li><li style="{{ toolChipStyle }}">n8n</li><li style="{{ toolChipStyle }}">MCPs &amp; Skills</li></ul>
-          </div>
-        </div>
       </div>
-      <section id="kontakt" aria-labelledby="kontakt-title" style="{{ ctaStyle }}">
-        <div style="{{ ctaTextWrapStyle }}">
-          <span style="{{ ctaLabelStyle }}">Kontakt</span>
-          <h2 id="kontakt-title" style="{{ ctaTextStyle }}">Ich bin ab sofort verfügbar und freue mich auf ein Gespräch.</h2>
-        </div>
-        <div style="{{ ctaLinksStyle }}">
-          <a href="mailto:svenja.mumelter@gmx.de" class="cta-mail" aria-label="E-Mail an svenja.mumelter@gmx.de schreiben" style="{{ ctaMailStyle }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg><span>E-Mail schreiben</span></a>
-          <a href="tel:+4917681922033" class="cta-phone" aria-label="Svenja Mumelter anrufen: 0176 81922033" style="{{ ctaPhoneStyle }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span>0176 81922033</span></a>
-        </div>
-      </section>
     </section>
 
-  </div>
+    <div style="{{ ctaWrapStyle }}">
+        <section id="kontakt" aria-labelledby="kontakt-title" style="{{ ctaStyle }}">
+          <div style="{{ ctaTextWrapStyle }}">
+            <span style="{{ ctaLabelStyle }}">Kontakt</span>
+            <h2 id="kontakt-title" style="{{ ctaTextStyle }}">Ich bin ab sofort verfügbar und freue mich auf ein Gespräch.</h2>
+          </div>
+          <div style="{{ ctaLinksStyle }}">
+            <a href="mailto:svenja.mumelter@gmx.de" class="cta-mail" aria-label="E-Mail an svenja.mumelter@gmx.de schreiben" style="{{ ctaMailStyle }}"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg><span>E-Mail schreiben</span></a>
+            <a href="tel:+4917681922033" class="cta-phone" aria-label="Svenja Mumelter anrufen: 0176 81922033" style="{{ ctaPhoneStyle }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span>0176 81922033</span></a>
+          </div>
+        </section>
+    </div>
 
+  </div>
 
   <div id="royalshrimp" style="{{ case1Style }}">
     <div style="{{ headerStyle }}">
@@ -382,6 +388,7 @@
           <span style="{{ footerColHeadStyle }}">Auf dieser Seite</span>
           <a href="#ueber-mich" class="footer-link" style="{{ footerLinkStyle }}">Über mich</a>
           <a href="#ansatz" class="footer-link" style="{{ footerLinkStyle }}">Ansatz</a>
+          <a href="#skills" class="footer-link" style="{{ footerLinkStyle }}">Skills</a>
           <a href="#royalshrimp" class="footer-link" style="{{ footerLinkStyle }}">Case RoyalShrimp</a>
           <a href="#cuply" class="footer-link" style="{{ footerLinkStyle }}">Case Cuply</a>
           <a href="#ai-experimente" class="footer-link" style="{{ footerLinkStyle }}">AI-Experimente</a>
@@ -631,10 +638,18 @@ class Component extends DCLogic {
         width: 30, height: 30, borderRadius: 9, backgroundColor: "#f1f5f5", border: "1px solid #e3eaea",
         marginBottom: 12,
       },
-      /* tools: four white group cards (same order as the tiles above), title regular + bold italic, chips on light grey */
-      toolsRowStyle: {
+      /* Skills & Tools: its own grey rounded panel (separated from "Mein Ansatz" by a white gap), white group cards */
+      skillsSectionStyle: {
         position: "relative", zIndex: 1,
-        display: "flex", flexDirection: "column", gap: m ? 12 : 16, width: "100%",
+        backgroundColor: "var(--surface-sunken)", borderRadius: m ? 28 : 40,
+        display: "flex", flexDirection: "column", gap: m ? 28 : 40,
+        padding: m ? "56px 24px 56px 24px" : "88px 72px 96px 72px",
+        marginTop: m ? 16 : 24,
+      },
+      /* contact card now sits on the white page between the skills panel and case 01 */
+      ctaWrapStyle: {
+        position: "relative", zIndex: 1, backgroundColor: paper,
+        padding: m ? "8px 24px 0 24px" : "16px 72px 0 72px",
       },
       toolGroupsStyle: m ? {
         display: "flex", flexDirection: "column", gap: 12, width: "100%",
