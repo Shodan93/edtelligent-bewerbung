@@ -34,10 +34,10 @@
       --font-headline:'Inter',-apple-system,Helvetica,Arial,sans-serif;
       --lh-tight:1.05; --ls-tight:-0.04em; --ls-wide:0.1em;
       /* Typography scale (desktop). --type-scale is one global knob for all sizes except the hero headline. */
-      --type-scale:1.06;
+      --type-scale:1; /* kept at 1: all sizes are whole pixels (QA 2026-10-06) */
       --fs-hero-title:44px; --fs-hero-lead:calc(18px * var(--type-scale)); --fs-hero-text:calc(17px * var(--type-scale));
-      --fs-label:calc(13px * var(--type-scale)); --fs-case-title:calc(38px * var(--type-scale)); --fs-case-sub:calc(18px * var(--type-scale));
-      --fs-body:calc(16px * var(--type-scale)); --fs-bullet:calc(16px * var(--type-scale)); --fs-caption:calc(14px * var(--type-scale)); --fs-button:calc(14px * var(--type-scale)); --fs-link:calc(14px * var(--type-scale));
+      --fs-label:calc(13px * var(--type-scale)); --fs-case-title:calc(40px * var(--type-scale)); --fs-case-sub:calc(18px * var(--type-scale));
+      --fs-body:calc(17px * var(--type-scale)); --fs-bullet:calc(17px * var(--type-scale)); --fs-caption:calc(14px * var(--type-scale)); --fs-button:calc(14px * var(--type-scale)); --fs-link:calc(14px * var(--type-scale));
     }
     /* Typography scale (mobile, same breakpoint as the page logic) */
     @media (max-width: 859px) {
@@ -580,7 +580,7 @@ class Component extends DCLogic {
       },
       bezugLabelStyle: label,
       bezugTextStyle: {
-        fontFamily: font, fontWeight: 400, fontSize: m ? 16.5 : 18, lineHeight: 1.6, letterSpacing: "-0.01em",
+        fontFamily: font, fontWeight: 400, fontSize: m ? 16 : 18, lineHeight: 1.6, letterSpacing: "-0.01em",
         color: strong, margin: 0,
       },
       bezugEmStyle: { fontStyle: "italic", fontWeight: 700 },
@@ -588,7 +588,7 @@ class Component extends DCLogic {
         fontSize: m ? 34 : 42, lineHeight: 1.05, color: accent, whiteSpace: "nowrap",
       }),
       factTextStyle: {
-        fontFamily: font, fontWeight: 500, fontSize: m ? 15 : 15.5, lineHeight: 1.45,
+        fontFamily: font, fontWeight: 500, fontSize: 15, lineHeight: 1.45,
         color: muted, margin: 0,
       },
 
@@ -615,7 +615,7 @@ class Component extends DCLogic {
       h2AccentStyle: { color: accent },
       h2EmStyle: { fontStyle: "italic", fontWeight: 700, color: strong },
       approachLeadStyle: {
-        fontFamily: font, fontWeight: 400, fontSize: m ? 17 : 18.5, lineHeight: 1.6,
+        fontFamily: font, fontWeight: 400, fontSize: m ? 17 : 18, lineHeight: 1.6,
         color: bodyText, margin: m ? "4px 0 0 0" : "6px 0 0 0", maxWidth: 1000,
       },
       /* tiles modelled on "Warum Edtelligent?": white rounded cards on a faint, radially faded grid;
@@ -679,11 +679,11 @@ class Component extends DCLogic {
         gridColumn: "1 / -1", /* full-width card: title left, chips right on desktop so the row is filled */
       },
       toolGroupWideTitleStyle: Object.assign({}, headline, {
-        fontWeight: 400, fontSize: m ? 19 : 20, lineHeight: 1.2, letterSpacing: "-0.03em",
+        fontWeight: 400, fontSize: m ? 18 : 20, lineHeight: 1.2, letterSpacing: "-0.03em",
         flex: m ? "0 0 auto" : "0 0 170px",
       }),
       toolGroupTitleStyle: Object.assign({}, headline, {
-        fontWeight: 400, fontSize: m ? 19 : 20, lineHeight: 1.2, letterSpacing: "-0.03em",
+        fontWeight: 400, fontSize: m ? 18 : 20, lineHeight: 1.2, letterSpacing: "-0.03em",
       }),
       toolGroupEmStyle: { fontStyle: "italic", fontWeight: 700 },
       toolsListStyle: { listStyle: "none", margin: 0, padding: 0, display: "flex", flexWrap: "wrap", gap: 8 },
@@ -697,7 +697,7 @@ class Component extends DCLogic {
       }),
       skillTitleEmStyle: { display: "block", fontStyle: "italic", fontWeight: 700 },
       skillTextStyle: {
-        fontFamily: font, fontWeight: 400, fontSize: m ? 16 : 16.5, lineHeight: 1.6,
+        fontFamily: font, fontWeight: 400, fontSize: 16, lineHeight: 1.6,
         color: bodyText, margin: 0,
       },
       eyebrowStyle: Object.assign({}, label, { whiteSpace: "nowrap" }),
@@ -717,7 +717,7 @@ class Component extends DCLogic {
         flex: m ? "0 0 auto" : "1 1 420px",
       },
       ctaLabelStyle: {
-        fontFamily: font, fontWeight: 600, fontSize: 13,
+        fontFamily: font, fontWeight: 600, fontSize: m ? 13 : 14,
         letterSpacing: "var(--ls-wide)", textTransform: "uppercase", lineHeight: 1.4, color: "var(--teal)", margin: 0,
       },
       ctaTextStyle: Object.assign({}, headline, {
@@ -821,23 +821,23 @@ class Component extends DCLogic {
       },
       c1CaptionTextStyle: { display: "flex", flexDirection: "column", gap: 4, minWidth: 0, flex: m ? "0 0 auto" : "1 1 320px" },
       c1CaptionLabelStyle: {
-        fontFamily: font, fontWeight: 600, fontSize: m ? 14 : 15, letterSpacing: "var(--ls-wide)", textTransform: "uppercase",
+        fontFamily: font, fontWeight: 600, fontSize: m ? 13 : 14, letterSpacing: "var(--ls-wide)", textTransform: "uppercase",
         lineHeight: 1.4, color: strong,
       },
       c1CaptionCopyStyle: {
-        fontFamily: font, fontWeight: 400, fontSize: m ? 16 : 16.5, lineHeight: 1.5,
+        fontFamily: font, fontWeight: 400, fontSize: 16, lineHeight: 1.5,
         color: bodyText,
       },
       c1CtaWrapStyle: { display: "flex", flexDirection: "column", alignItems: m ? "flex-start" : "center", gap: 6, flexShrink: 0 },
       c1CtaBtnStyle: Object.assign({}, pill, { height: 46, padding: m ? "0 28px" : "0 30px", fontSize: m ? 16 : 17 }),
       c1UtilRowStyle: { display: "flex", alignItems: "center", gap: 8, marginTop: 4 },
       c1UtilLinkStyle: {
-        fontFamily: font, fontWeight: 500, fontSize: 13.5, lineHeight: 1.4,
+        fontFamily: font, fontWeight: 500, fontSize: 14, lineHeight: 1.4,
         color: strong, background: "none", border: "none", padding: 0, cursor: "pointer",
         textDecoration: "underline", textDecorationColor: "var(--ink-200)", textUnderlineOffset: 3,
       },
       c1CtaNoteStyle: {
-        fontFamily: font, fontWeight: 400, fontSize: 12.5, lineHeight: 1.4,
+        fontFamily: font, fontWeight: 400, fontSize: 13, lineHeight: 1.4,
         color: muted,
       },
 
@@ -927,13 +927,13 @@ class Component extends DCLogic {
         marginBottom: 12, /* same chip-to-title spacing as the light cards (stepChipStyle) */
       },
       aiTitleStyle: Object.assign({}, headline, {
-        fontWeight: 600, fontSize: m ? 19 : 20, lineHeight: 1.25, letterSpacing: "-0.03em",
+        fontWeight: 600, fontSize: m ? 18 : 20, lineHeight: 1.25, letterSpacing: "-0.03em",
       }),
       aiTitleDarkStyle: Object.assign({}, headline, {
-        fontWeight: 600, fontSize: m ? 19 : 20, lineHeight: 1.25, letterSpacing: "-0.03em", color: "#ffffff",
+        fontWeight: 600, fontSize: m ? 18 : 20, lineHeight: 1.25, letterSpacing: "-0.03em", color: "#ffffff",
       }),
-      aiTextStyle: { fontFamily: font, fontWeight: 400, fontSize: m ? 16 : 16.5, lineHeight: 1.6, color: bodyText, margin: 0 },
-      aiTextDarkStyle: { fontFamily: font, fontWeight: 400, fontSize: m ? 16 : 16.5, lineHeight: 1.6, color: "#d3dee1", margin: 0 },
+      aiTextStyle: { fontFamily: font, fontWeight: 400, fontSize: 16, lineHeight: 1.6, color: bodyText, margin: 0 },
+      aiTextDarkStyle: { fontFamily: font, fontWeight: 400, fontSize: 16, lineHeight: 1.6, color: "#d3dee1", margin: 0 },
 
       /* Footer, modelled on edtelligent.de: brand teal with rounded top; left = petrol wordmark (white dot) + petrol copy (5.6:1);
          right = mirrored darker swoosh panel (#007d73) carrying the white text (5.0:1); bottom bars with a hairline above */
@@ -960,13 +960,13 @@ class Component extends DCLogic {
       },
       footerDotStyle: { color: "#ffffff" },
       footerAboutStyle: {
-        fontFamily: font, fontWeight: 500, fontSize: m ? 14.5 : 15, lineHeight: 1.6,
+        fontFamily: font, fontWeight: 500, fontSize: m ? 14 : 15, lineHeight: 1.6,
         color: strong, margin: 0,
       },
       footerBarLeftStyle: {
         display: m ? "none" : "block",
         marginTop: "auto", paddingTop: 20, borderTop: "1px solid rgba(30,55,65,0.22)",
-        fontFamily: font, fontWeight: 500, fontSize: 13.5, lineHeight: 1.5, color: strong,
+        fontFamily: font, fontWeight: 500, fontSize: 14, lineHeight: 1.5, color: strong,
       },
       footerPanelStyle: {
         position: "relative", zIndex: 1, backgroundColor: "#007d73",
@@ -988,7 +988,7 @@ class Component extends DCLogic {
       },
       footerColStyle: { display: "flex", flexDirection: "column", gap: 10, minWidth: 0, alignItems: m ? "flex-start" : "flex-end", textAlign: m ? "left" : "right" },
       footerColHeadStyle: {
-        fontFamily: font, fontWeight: 600, fontSize: m ? 15.5 : 16, lineHeight: 1.4, letterSpacing: "-0.01em",
+        fontFamily: font, fontWeight: 600, fontSize: m ? 15 : 16, lineHeight: 1.4, letterSpacing: "-0.01em",
         color: "#ffffff", marginBottom: 4,
       },
       footerLinkStyle: { fontFamily: font, fontWeight: 400, fontSize: m ? 15 : 15, lineHeight: 1.5 },
@@ -996,7 +996,7 @@ class Component extends DCLogic {
         position: "relative",
         display: "flex", flexDirection: m ? "column" : "row", justifyContent: m ? "flex-start" : "flex-end", gap: m ? 6 : 0,
         marginTop: m ? 0 : "auto", paddingTop: 20, borderTop: "1px solid rgba(255,255,255,0.3)",
-        fontFamily: font, fontWeight: 500, fontSize: 13.5, lineHeight: 1.5, color: "#ffffff",
+        fontFamily: font, fontWeight: 500, fontSize: 14, lineHeight: 1.5, color: "#ffffff",
       },
       footerCopyMobileStyle: { display: m ? "block" : "none" },
       footerHeartStyle: { display: "inline-block", verticalAlign: "-1px", margin: "0 1px" },
