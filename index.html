@@ -25,6 +25,7 @@
       --teal:#2ac1b0; /* edtelligent brand teal: fills, photo block, footer, swooshes */
       --teal-display:#149a8c; /* large headline accents */
       --teal-ink:#007d73; /* small text, labels, line icons */
+      --yellow:#ffcc42; /* edtelligent CTA yellow: the page's single eye-catcher, used only in the contact card */
       --surface-page:var(--paper); --surface-sunken:var(--ink-50);
       --text-primary:var(--ink-900); --text-secondary:var(--ink-600); --text-on-accent:var(--white);
       --accent-primary:var(--teal-display); --accent-primary-hover:var(--ink-900);
@@ -58,8 +59,9 @@
     .toc a:hover { color: var(--teal-ink); text-decoration: underline; text-decoration-color: var(--teal); }
     [id] { scroll-margin-top: 24px; }
     .video-tile { cursor: pointer; }
-    /* buttons: petrol pill with white text; hover/focus = instant swap to brand teal with petrol text (5.6:1), no transition */
-    .cta-mail:hover, .cta-mail:focus-visible, .cta-phone:hover, .cta-phone:focus-visible { background-color: var(--teal) !important; color: var(--ink-900) !important; border-color: var(--teal) !important; }
+    /* contact buttons: yellow = the only yellow on the page. Mail = solid yellow, phone = yellow outline; hover/focus = instant swap to white (no transition) */
+    .cta-mail:hover, .cta-mail:focus-visible { background-color: #ffffff !important; border-color: #ffffff !important; }
+    .cta-phone:hover, .cta-phone:focus-visible { background-color: var(--yellow) !important; color: var(--ink-900) !important; border-color: var(--yellow) !important; }
     .cta-mail:focus-visible, .cta-phone:focus-visible { outline: 2px solid #ffffff; outline-offset: 3px; }
     .btn-pill:hover, .btn-pill:focus-visible { background-color: var(--teal) !important; color: var(--ink-900) !important; }
     .btn-pill:focus-visible { outline: 3px solid var(--ink-900); outline-offset: 3px; }
@@ -701,7 +703,7 @@ class Component extends DCLogic {
         color: bodyText, margin: 0,
       },
       eyebrowStyle: Object.assign({}, label, { whiteSpace: "nowrap" }),
-      /* Contact: rounded petrol card, teal label, white headline; white mail button + outlined phone, both turn teal on hover */
+      /* Contact: rounded petrol card = the page's eye-catcher. Yellow label, white headline, solid yellow mail button + yellow-outlined phone button */
       ctaStyle: {
         position: "relative", zIndex: 1,
         display: "flex", flexDirection: m ? "column" : "row", flexWrap: "wrap",
@@ -718,7 +720,7 @@ class Component extends DCLogic {
       },
       ctaLabelStyle: {
         fontFamily: font, fontWeight: 600, fontSize: m ? 13 : 14,
-        letterSpacing: "var(--ls-wide)", textTransform: "uppercase", lineHeight: 1.4, color: "var(--teal)", margin: 0,
+        letterSpacing: "var(--ls-wide)", textTransform: "uppercase", lineHeight: 1.4, color: "var(--yellow)", margin: 0, /* yellow on petrol 8.3:1 */
       },
       ctaTextStyle: Object.assign({}, headline, {
         fontSize: m ? 20 : 24, lineHeight: 1.3, letterSpacing: "-0.025em", color: "#ffffff",
@@ -729,14 +731,14 @@ class Component extends DCLogic {
       },
       ctaMailStyle: {
         display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8,
-        height: 44, padding: "0 20px", borderRadius: 999, border: "1.5px solid #ffffff",
-        backgroundColor: "#ffffff", color: "var(--ink-900)",
+        height: 48, padding: "0 22px", borderRadius: 999, border: "1.5px solid var(--yellow)",
+        backgroundColor: "var(--yellow)", color: "var(--ink-900)", /* petrol on yellow 8.3:1 */
         fontFamily: font, fontWeight: 600, fontSize: 16,
         textDecoration: "none", whiteSpace: "nowrap", boxSizing: "border-box",
       },
       ctaPhoneStyle: {
         display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8,
-        height: 44, padding: "0 18px", borderRadius: 999, border: "1.5px solid rgba(255,255,255,0.6)",
+        height: 48, padding: "0 20px", borderRadius: 999, border: "1.5px solid var(--yellow)",
         backgroundColor: "transparent", color: "#ffffff",
         fontFamily: font, fontWeight: 600, fontSize: 16,
         textDecoration: "none", whiteSpace: "nowrap", boxSizing: "border-box",
