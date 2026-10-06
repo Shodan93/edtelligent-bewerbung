@@ -124,7 +124,8 @@
 
     <section id="ai-experimente" aria-labelledby="ai-title" style="{{ aiStyle }}">
       <div style="{{ skillsHeadStyle }}">
-        <h2 id="ai-title" style="{{ introH2Style }}">Ein paar meiner <em style="{{ h2EmStyle }}">AI-Experimente</em></h2>
+        <span style="{{ sectionLabelStyle }}">Eigene Projekte</span>
+        <h2 id="ai-title" style="{{ introH2Style }}"><span style="{{ h2AccentStyle }}">Ein paar meiner</span> <em style="{{ h2EmStyle }}">AI-Experimente</em></h2>
         <p style="{{ approachLeadStyle }}">Neue Ideen habe ich fast jede Woche, diese hier habe ich umgesetzt.</p>
       </div>
       <div style="{{ aiWrapStyle }}">
@@ -297,7 +298,8 @@
 
   <section id="einblicke" aria-labelledby="einblicke-title" style="{{ einblickeStyle }}">
     <div style="{{ skillsHeadStyle }}">
-      <h2 id="einblicke-title" style="{{ introH2Style }}">Mehr <em style="{{ h2EmStyle }}">Einblicke</em></h2>
+      <span style="{{ sectionLabelStyle }}">Arbeitsproben</span>
+      <h2 id="einblicke-title" style="{{ introH2Style }}"><span style="{{ h2AccentStyle }}">Mehr</span> <em style="{{ h2EmStyle }}">Einblicke</em></h2>
     </div>
   </section>
 
@@ -532,7 +534,7 @@ class Component extends DCLogic {
       /* "Kurz über mich": large 4:5 portrait with a flat teal block offset behind it, copy left, key facts underneath */
       aboutSectionStyle: {
         display: "flex", flexDirection: "column", gap: m ? 32 : 56,
-        padding: m ? "44px 24px 64px 24px" : "60px 72px 116px 72px",
+        padding: m ? "44px 24px 64px 24px" : "60px 72px 88px 72px", /* even section rhythm (~104-124px between blocks) */
       },
       aboutStyle: {
         display: "flex", flexDirection: m ? "column" : "row",
@@ -574,7 +576,7 @@ class Component extends DCLogic {
       factStyle: { display: "flex", flexDirection: "column", gap: 6, minWidth: 0 },
       /* "Persönlicher Bezug" (ecomex): rounded light card with a teal edge, regular + bold-italic lead-in like edtelligent.de */
       bezugStyle: {
-        display: "flex", flexDirection: "column", gap: 8, width: m ? "100%" : "calc((100% - 56px) / 3 * 2 + 28px)", alignSelf: "flex-start", boxSizing: "border-box", /* spans exactly the first two columns of the facts grid above (3 cols, 28px gap) */
+        display: "flex", flexDirection: "column", gap: 8, width: "100%", boxSizing: "border-box", /* full width like the facts row above; text runs in long lines */
         backgroundColor: "var(--surface-sunken)", borderRadius: 24, borderLeft: "4px solid var(--teal)",
         padding: m ? "20px 22px 22px 20px" : "22px 40px 24px 36px",
       },
@@ -744,7 +746,7 @@ class Component extends DCLogic {
       einblickeStyle: {
         position: "relative", zIndex: 1, backgroundColor: paper,
         display: "flex", flexDirection: "column",
-        padding: m ? "64px 24px 0 24px" : "112px 72px 0 72px",
+        padding: m ? "64px 24px 0 24px" : "88px 72px 0 72px",
       },
       case1Style: {
         position: "relative", zIndex: 1,
@@ -892,7 +894,7 @@ class Component extends DCLogic {
       aiStyle: {
         position: "relative", zIndex: 1, backgroundColor: paper,
         display: "flex", flexDirection: "column", gap: m ? 28 : 48,
-        padding: m ? "8px 24px 56px 24px" : "0 72px 88px 72px",
+        padding: m ? "8px 24px 64px 24px" : "0 72px 104px 72px",
       },
       /* background like the edtelligent.de tiles: soft teal-grey glow + faded square grid, cards on top */
       aiWrapStyle: { position: "relative", width: "100%" },
