@@ -576,13 +576,14 @@ class Component extends DCLogic {
       factStyle: { display: "flex", flexDirection: "column", gap: 6, minWidth: 0 },
       /* "Persönlicher Bezug" (ecomex): rounded light card with a teal edge, regular + bold-italic lead-in like edtelligent.de */
       bezugStyle: {
-        display: "flex", flexDirection: "column", gap: 8, width: "100%", boxSizing: "border-box", /* full width like the facts row above; text runs in long lines */
+        display: "flex", flexDirection: "column", gap: m ? 10 : 12, width: "100%", boxSizing: "border-box", /* full width like the facts row above; text runs in long lines */
         backgroundColor: "var(--surface-sunken)", borderRadius: 24, borderLeft: "4px solid var(--teal)",
-        padding: m ? "20px 22px 22px 20px" : "22px 40px 24px 36px",
+        padding: m ? "24px 22px 26px 20px" : "34px 48px 36px 44px", /* more air inside so the card doesn't feel squeezed under the facts */
+        marginTop: m ? 8 : 16, /* 40 / 72px below the facts row instead of 32 / 56 */
       },
       bezugLabelStyle: label,
       bezugTextStyle: {
-        fontFamily: font, fontWeight: 400, fontSize: m ? 16 : 18, lineHeight: 1.6, letterSpacing: "-0.01em",
+        fontFamily: font, fontWeight: 400, fontSize: m ? 16 : 18, lineHeight: 1.65, letterSpacing: "-0.01em",
         color: strong, margin: 0,
       },
       bezugEmStyle: { fontStyle: "italic", fontWeight: 700 },
