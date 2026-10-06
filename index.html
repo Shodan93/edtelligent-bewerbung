@@ -89,7 +89,7 @@
     <header style="{{ heroStyle }}">
       <div style="{{ heroTopRowStyle }}">
         <img src="assets/edtelligent-logo.svg" alt="EDTELLIGENT" width="237" height="42" style="{{ heroLogoStyle }}" />
-        <nav aria-label="Inhalt" class="toc" style="{{ navStyle }}"><a href="#ueber-mich">Über mich</a><a href="#ansatz">Ansatz</a><a href="#plan">90 Tage</a><a href="#royalshrimp">Case RoyalShrimp</a><a href="#cuply">Case Cuply</a><a href="#kontakt">Kontakt</a></nav>
+        <nav aria-label="Inhalt" class="toc" style="{{ navStyle }}"><a href="#ueber-mich">Über mich</a><a href="#ansatz">Ansatz</a><a href="#plan">90 Tage</a><a href="#royalshrimp">Case RoyalShrimp</a><a href="#cuply">Case Cuply</a><a href="#ai-experimente">AI-Experimente</a><a href="#kontakt">Kontakt</a></nav>
       </div>
       <div style="{{ heroTextStyle }}">
         <p style="{{ heroKickerStyle }}">Svenja Mumelter · Bewerbung als Growth Marketing Managerin</p>
@@ -343,6 +343,40 @@
     </div>
   </div>
 
+  <section id="ai-experimente" aria-labelledby="ai-title" style="{{ aiStyle }}">
+    <div style="{{ skillsHeadStyle }}">
+      <h2 id="ai-title" style="{{ introH2Style }}">Ein paar meiner <em style="{{ h2EmStyle }}">AI-Experimente</em></h2>
+      <p style="{{ approachLeadStyle }}">Neue Ideen habe ich fast jede Woche, diese hier habe ich umgesetzt.</p>
+    </div>
+    <ul style="{{ aiGridStyle }}">
+        <li style="{{ aiCardThirdStyle }}">
+          <span style="{{ stepChipStyle }}" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 48 48" fill="none" stroke="#007d73" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9h14a6 6 0 0 1 4 2 6 6 0 0 1 4-2h14v30H28a4 4 0 0 0-4 3 4 4 0 0 0-4-3H6z"></path><path d="M24 11v31"></path></svg></span>
+          <h3 style="{{ aiTitleStyle }}">Lern-App zur Prüfungsvorbereitung</h3>
+          <p style="{{ aiTextStyle }}">Gebaut aus den Unterlagen meiner Weiterbildungsmodule.</p>
+        </li>
+        <li style="{{ aiCardThirdStyle }}">
+          <span style="{{ stepChipStyle }}" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 48 48" fill="none" stroke="#007d73" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4h28v40l-5-3-5 3-4-3-5 3-4-3-5 3z"></path><path d="M17 15h14M17 23h14M17 31h8"></path></svg></span>
+          <h3 style="{{ aiTitleStyle }}">Ausgaben-App</h3>
+          <p style="{{ aiTextStyle }}">Selbst per Vibe Coding gebaut, Kassenbons werden über n8n automatisch erfasst.</p>
+        </li>
+        <li style="{{ aiCardThirdStyle }}">
+          <span style="{{ stepChipStyle }}" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 48 48" fill="none" stroke="#007d73" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 41 18 15l8 13 5-7 14 20z"></path><path d="m14 22 4 3 4-3"></path></svg></span>
+          <h3 style="{{ aiTitleStyle }}">Wander-App</h3>
+          <p style="{{ aiTextStyle }}">Erstellt aus GPX-Dateien und Fotos Touren und macht Wanderungen, Ausflüge oder ganze Urlaube per Link teilbar.</p>
+        </li>
+        <li style="{{ aiCardHalfStyle }}">
+          <span style="{{ stepChipStyle }}" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 48 48" fill="none" stroke="#007d73" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22 24 7l18 15"></path><path d="M11 18v23h26V18"></path><path d="M20 41V29h8v12"></path></svg></span>
+          <h3 style="{{ aiTitleStyle }}">Smart-Home-Automationen</h3>
+          <p style="{{ aiTextStyle }}">Für viele kleine Abläufe im Alltag.</p>
+        </li>
+        <li style="{{ aiCardDarkStyle }}">
+          <span style="{{ aiChipDarkStyle }}" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 48 48" fill="none" stroke="#2ac1b0" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="40" height="32" rx="4"></rect><path d="M4 16h40"></path><path d="m20 25-5 4 5 4M28 25l5 4-5 4"></path></svg></span>
+          <h3 style="{{ aiTitleDarkStyle }}">Diese Landingpage</h3>
+          <p style="{{ aiTextDarkStyle }}">Konzipiert und gestaltet von mir, umgesetzt mit Claude Code.</p>
+        </li>
+    </ul>
+  </section>
+
   <!-- Footer modelled on the edtelligent.de footer: brand teal, petrol wordmark with white dot, petrol copy left;
        the darker swoosh is mirrored to the right so the white text sits on dark teal (5.0:1) instead of the light teal (2.25:1). -->
   <footer style="{{ footerStyle }}">
@@ -378,6 +412,7 @@
           <a href="#plan" class="footer-link" style="{{ footerLinkStyle }}">90 Tage</a>
           <a href="#royalshrimp" class="footer-link" style="{{ footerLinkStyle }}">Case RoyalShrimp</a>
           <a href="#cuply" class="footer-link" style="{{ footerLinkStyle }}">Case Cuply</a>
+          <a href="#ai-experimente" class="footer-link" style="{{ footerLinkStyle }}">AI-Experimente</a>
         </nav>
         <div style="{{ footerColStyle }}">
           <span style="{{ footerColHeadStyle }}">Kontakt</span>
@@ -874,6 +909,43 @@ class Component extends DCLogic {
         color: muted, margin: m ? "-4px 0 0 0" : "-8px 0 0 0",
       },
       primaryBtnStyle: Object.assign({}, pill, { height: 48, padding: m ? "0 36px" : "0 48px", fontSize: m ? 17 : 18 }),
+
+      /* AI experiments: white section after the cases; 3 + 2 cards on a 6-column grid (no gaps), last card dark petrol */
+      aiStyle: {
+        position: "relative", zIndex: 1, backgroundColor: paper,
+        display: "flex", flexDirection: "column", gap: m ? 28 : 48,
+        padding: m ? "56px 24px 64px 24px" : "88px 72px 104px 72px",
+      },
+      aiGridStyle: m ? {
+        listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 14, width: "100%",
+      } : {
+        listStyle: "none", margin: 0, padding: 0, display: "grid", gridTemplateColumns: "repeat(6, minmax(0, 1fr))", gap: 20, width: "100%",
+      },
+      aiCardThirdStyle: {
+        gridColumn: "span 2", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 10, minWidth: 0,
+        backgroundColor: "var(--surface-sunken)", borderRadius: 24, padding: m ? "22px 22px 24px 22px" : "28px 30px 30px 30px",
+      },
+      aiCardHalfStyle: {
+        gridColumn: "span 3", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 10, minWidth: 0,
+        backgroundColor: "var(--surface-sunken)", borderRadius: 24, padding: m ? "22px 22px 24px 22px" : "28px 30px 30px 30px",
+      },
+      aiCardDarkStyle: {
+        gridColumn: "span 3", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 10, minWidth: 0,
+        backgroundColor: "var(--ink-900)", borderRadius: 24, padding: m ? "22px 22px 24px 22px" : "28px 30px 30px 30px",
+      },
+      aiChipDarkStyle: {
+        display: "inline-flex", alignItems: "center", justifyContent: "center",
+        width: 30, height: 30, borderRadius: 9, backgroundColor: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.18)",
+        marginBottom: 12, /* same chip-to-title spacing as the light cards (stepChipStyle) */
+      },
+      aiTitleStyle: Object.assign({}, headline, {
+        fontWeight: 600, fontSize: m ? 19 : 20, lineHeight: 1.25, letterSpacing: "-0.03em",
+      }),
+      aiTitleDarkStyle: Object.assign({}, headline, {
+        fontWeight: 600, fontSize: m ? 19 : 20, lineHeight: 1.25, letterSpacing: "-0.03em", color: "#ffffff",
+      }),
+      aiTextStyle: { fontFamily: font, fontWeight: 400, fontSize: m ? 16 : 16.5, lineHeight: 1.6, color: bodyText, margin: 0 },
+      aiTextDarkStyle: { fontFamily: font, fontWeight: 400, fontSize: m ? 16 : 16.5, lineHeight: 1.6, color: "#d3dee1", margin: 0 },
 
       /* Footer, modelled on edtelligent.de: brand teal with rounded top; left = petrol wordmark (white dot) + petrol copy (5.6:1);
          right = mirrored darker swoosh panel (#007d73) carrying the white text (5.0:1); bottom bars with a hairline above */
