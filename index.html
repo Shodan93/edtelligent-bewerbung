@@ -378,7 +378,7 @@
     <div style="{{ footerMainStyle }}">
       <div style="{{ footerBrandStyle }}">
         <span style="{{ footerNameStyle }}">Svenja Mumelter<span aria-hidden="true" style="{{ footerDotStyle }}">.</span></span>
-        <p style="{{ footerAboutStyle }}">Konzept, Inhalt und Design: Svenja Mumelter, gestaltet in Figma. Umgesetzt KI-gestützt mit Claude Code, von der Analyse der Stellenanzeige bis zum Deployment.</p>
+        <p style="{{ footerAboutStyle }}">Konzept, Inhalt und Design: Svenja Mumelter, gestaltet in Figma.</p>
       </div>
       <div style="{{ footerBarLeftStyle }}"><span>© 2026 Svenja Mumelter. Alle Rechte vorbehalten.</span></div>
     </div>
@@ -392,17 +392,9 @@
         <path d="M0 48 C 38 44, 74 30, 100 13 L100 48 Z" fill="#007d73"></path>
       </svg>
       <div style="{{ footerColsStyle }}">
-        <nav aria-label="Inhalt (Footer)" style="{{ footerColStyle }}">
-          <span style="{{ footerColHeadStyle }}">Auf dieser Seite</span>
-          <a href="#ueber-mich" class="footer-link" style="{{ footerLinkStyle }}">Über mich</a>
-          <a href="#ai-experimente" class="footer-link" style="{{ footerLinkStyle }}">AI-Experimente</a>
-          <a href="#skills" class="footer-link" style="{{ footerLinkStyle }}">Skills</a>
-          <a href="#ansatz" class="footer-link" style="{{ footerLinkStyle }}">Ansatz</a>
-          <a href="#einblicke" class="footer-link" style="{{ footerLinkStyle }}">Mehr Einblicke</a>
-        </nav>
         <div style="{{ footerColStyle }}">
           <span style="{{ footerColHeadStyle }}">Kontakt</span>
-          <a href="mailto:svenja.mumelter@gmx.de" class="footer-link" style="{{ footerLinkStyle }}">E-Mail schreiben</a>
+          <a href="mailto:svenja.mumelter@gmx.de" class="footer-link" style="{{ footerLinkStyle }}">svenja.mumelter@gmx.de</a>
           <a href="tel:+4917681922033" class="footer-link" style="{{ footerLinkStyle }}">0176 81922033</a>
         </div>
       </div>
@@ -930,7 +922,7 @@ class Component extends DCLogic {
         backgroundColor: "var(--teal)",
         borderRadius: m ? "28px 28px 0 0" : "40px 40px 0 0",
         display: m ? "flex" : "grid", flexDirection: "column",
-        gridTemplateColumns: "minmax(0, 1fr) minmax(460px, 42%)",
+        gridTemplateColumns: "minmax(0, 1fr) minmax(400px, 36%)", /* one contact column only */
       },
       footerArcsStyle: {
         position: "absolute", left: 0, top: 0, zIndex: 0, pointerEvents: "none",
@@ -974,7 +966,7 @@ class Component extends DCLogic {
         gap: m ? "28px 48px" : "32px 64px", justifyContent: m ? "flex-start" : "flex-end",
         marginBottom: m ? 0 : 72,
       },
-      footerColStyle: { display: "flex", flexDirection: "column", gap: 10, minWidth: 0 },
+      footerColStyle: { display: "flex", flexDirection: "column", gap: 10, minWidth: 0, alignItems: m ? "flex-start" : "flex-end", textAlign: m ? "left" : "right" },
       footerColHeadStyle: {
         fontFamily: font, fontWeight: 600, fontSize: m ? 15.5 : 16, lineHeight: 1.4, letterSpacing: "-0.01em",
         color: "#ffffff", marginBottom: 4,
