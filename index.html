@@ -211,12 +211,12 @@
       </div>
       <div style="{{ toolGroupsStyle }}">
           <div style="{{ toolGroupWideStyle }}">
-            <h3 style="{{ toolGroupTitleStyle }}">KI &amp; <em style="{{ toolGroupEmStyle }}">Automatisierung</em></h3>
-            <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">ChatGPT &amp; Codex</li><li style="{{ toolChipStyle }}">Claude &amp; Claude Code</li><li style="{{ toolChipStyle }}">Gemini</li><li style="{{ toolChipStyle }}">Perplexity</li><li style="{{ toolChipStyle }}">n8n</li><li style="{{ toolChipStyle }}">MCPs &amp; Skills</li></ul>
+            <h3 style="{{ toolGroupWideTitleStyle }}">SEO &amp; <em style="{{ toolGroupEmStyle }}">GEO</em></h3>
+            <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Search Console</li><li style="{{ toolChipStyle }}">Sistrix</li><li style="{{ toolChipStyle }}">Semrush</li><li style="{{ toolChipStyle }}">Ahrefs</li><li style="{{ toolChipStyle }}">Screaming Frog</li><li style="{{ toolChipStyle }}">PageSpeed Insights</li><li style="{{ toolChipStyle }}">AnswerThePublic</li><li style="{{ toolChipStyle }}">Content-Strategie</li></ul>
           </div>
           <div style="{{ toolGroupStyle }}">
-            <h3 style="{{ toolGroupTitleStyle }}">SEO &amp; <em style="{{ toolGroupEmStyle }}">GEO</em></h3>
-            <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Search Console</li><li style="{{ toolChipStyle }}">Sistrix</li><li style="{{ toolChipStyle }}">Semrush</li><li style="{{ toolChipStyle }}">Ahrefs</li><li style="{{ toolChipStyle }}">Screaming Frog</li><li style="{{ toolChipStyle }}">PageSpeed Insights</li><li style="{{ toolChipStyle }}">AnswerThePublic</li><li style="{{ toolChipStyle }}">Content-Strategie</li></ul>
+            <h3 style="{{ toolGroupTitleStyle }}">KI &amp; <em style="{{ toolGroupEmStyle }}">Automatisierung</em></h3>
+            <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">ChatGPT &amp; Codex</li><li style="{{ toolChipStyle }}">Claude &amp; Claude Code</li><li style="{{ toolChipStyle }}">Gemini</li><li style="{{ toolChipStyle }}">Perplexity</li><li style="{{ toolChipStyle }}">n8n</li><li style="{{ toolChipStyle }}">MCPs &amp; Skills</li></ul>
           </div>
           <div style="{{ toolGroupStyle }}">
             <h3 style="{{ toolGroupTitleStyle }}">Performance <em style="{{ toolGroupEmStyle }}">Marketing</em></h3>
@@ -662,11 +662,16 @@ class Component extends DCLogic {
         padding: m ? "20px 20px 22px 20px" : "24px 28px 26px 28px",
       },
       toolGroupWideStyle: {
-        display: "flex", flexDirection: "column", gap: m ? 12 : 14, minWidth: 0,
+        display: "flex", flexDirection: m ? "column" : "row", alignItems: m ? "flex-start" : "center",
+        gap: m ? 12 : 32, minWidth: 0,
         backgroundColor: "var(--white)", borderRadius: 20,
-        padding: m ? "20px 20px 22px 20px" : "24px 28px 26px 28px",
-        gridColumn: "1 / -1", /* odd number of groups: the last card closes the grid over the full width */
+        padding: m ? "20px 20px 22px 20px" : "26px 28px 26px 28px",
+        gridColumn: "1 / -1", /* full-width card: title left, chips right on desktop so the row is filled */
       },
+      toolGroupWideTitleStyle: Object.assign({}, headline, {
+        fontWeight: 400, fontSize: m ? 19 : 20, lineHeight: 1.2, letterSpacing: "-0.03em",
+        flex: m ? "0 0 auto" : "0 0 170px",
+      }),
       toolGroupTitleStyle: Object.assign({}, headline, {
         fontWeight: 400, fontSize: m ? 19 : 20, lineHeight: 1.2, letterSpacing: "-0.03em",
       }),
