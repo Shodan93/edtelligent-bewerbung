@@ -599,9 +599,9 @@ class Component extends DCLogic {
       introStyle: {
         position: "relative", zIndex: 1,
         backgroundColor: "var(--surface-sunken)", borderRadius: m ? 28 : 40, overflow: "hidden",
-        marginTop: m ? 16 : 24,
+        marginTop: m ? 40 : 72, /* clear gap after the grey skills panel, same as around the contact card */
         display: "flex", flexDirection: "column", gap: m ? 32 : 48,
-        padding: m ? "60px 24px 56px 24px" : "104px 72px 96px 72px",
+        padding: m ? "56px 24px 56px 24px" : "96px 72px 96px 72px", /* grey panels: unified 96px top/bottom */
         alignItems: "flex-start",
       },
       ansatzSwooshStyle: {
@@ -657,7 +657,7 @@ class Component extends DCLogic {
         position: "relative", zIndex: 1,
         backgroundColor: "var(--surface-sunken)", borderRadius: m ? 28 : 40,
         display: "flex", flexDirection: "column", gap: m ? 28 : 40,
-        padding: m ? "56px 24px 56px 24px" : "88px 72px 96px 72px",
+        padding: m ? "56px 24px 56px 24px" : "96px 72px 96px 72px", /* grey panels: unified 96px top/bottom */
       },
       /* contact card now sits on the white page between the skills panel and case 01 */
       ctaWrapStyle: {
@@ -710,7 +710,7 @@ class Component extends DCLogic {
         display: "flex", flexDirection: m ? "column" : "row", flexWrap: "wrap",
         alignItems: m ? "flex-start" : "center", justifyContent: "space-between",
         gap: m ? 18 : "16px 32px", width: "100%", boxSizing: "border-box",
-        padding: m ? "24px 22px" : "28px 36px",
+        padding: m ? "28px 24px" : "36px 40px", /* a bit more weight now that it is the yellow eye-catcher */
         borderRadius: 24,
         backgroundColor: "var(--ink-900)",
         marginTop: m ? 8 : 16,
@@ -859,10 +859,10 @@ class Component extends DCLogic {
 
       case2Style: {
         position: "relative",
-        backgroundColor: "var(--surface-sunken)", borderRadius: m ? 28 : 40, marginBottom: m ? 16 : 24,
+        backgroundColor: "var(--surface-sunken)", borderRadius: m ? 28 : 40, marginBottom: m ? 40 : 72, /* air before the teal footer */
         display: "flex", flexDirection: "column",
         gap: m ? 24 : 20,
-        padding: m ? "56px 24px 60px 24px" : "88px 72px 104px 72px",
+        padding: m ? "56px 24px 56px 24px" : "96px 72px 96px 72px", /* grey panels: unified 96px top/bottom */
         alignItems: "flex-start", overflow: "hidden",
       },
       case2ContentRowStyle: {
