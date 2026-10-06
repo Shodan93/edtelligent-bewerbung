@@ -214,10 +214,14 @@
             <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Google Ads</li><li style="{{ toolChipStyle }}">Meta Ads</li><li style="{{ toolChipStyle }}">GA4</li><li style="{{ toolChipStyle }}">Google Tag Manager</li></ul>
           </div>
           <div style="{{ toolGroupStyle }}">
+            <h3 style="{{ toolGroupTitleStyle }}">CRM &amp; <em style="{{ toolGroupEmStyle }}">Lifecycle</em></h3>
+            <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Brevo</li><li style="{{ toolChipStyle }}">Lead Scoring</li><li style="{{ toolChipStyle }}">Segmentierung</li><li style="{{ toolChipStyle }}">A/B-Testing</li></ul>
+          </div>
+          <div style="{{ toolGroupStyle }}">
             <h3 style="{{ toolGroupTitleStyle }}">KI &amp; <em style="{{ toolGroupEmStyle }}">Automatisierung</em></h3>
             <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">ChatGPT</li><li style="{{ toolChipStyle }}">Claude</li><li style="{{ toolChipStyle }}">Claude Code</li><li style="{{ toolChipStyle }}">Gemini</li><li style="{{ toolChipStyle }}">Perplexity</li><li style="{{ toolChipStyle }}">n8n</li></ul>
           </div>
-          <div style="{{ toolGroupStyle }}">
+          <div style="{{ toolGroupWideStyle }}">
             <h3 style="{{ toolGroupTitleStyle }}">Shop &amp; <em style="{{ toolGroupEmStyle }}">Design</em></h3>
             <ul style="{{ toolsListStyle }}"><li style="{{ toolChipStyle }}">Shopify</li><li style="{{ toolChipStyle }}">WordPress + WooCommerce</li><li style="{{ toolChipStyle }}">JTL-Shop</li><li style="{{ toolChipStyle }}">Figma</li><li style="{{ toolChipStyle }}">Photoshop CC</li></ul>
           </div>
@@ -626,6 +630,12 @@ class Component extends DCLogic {
         display: "flex", flexDirection: "column", gap: m ? 12 : 14, minWidth: 0,
         backgroundColor: "var(--white)", borderRadius: 20,
         padding: m ? "20px 20px 22px 20px" : "24px 28px 26px 28px",
+      },
+      toolGroupWideStyle: {
+        display: "flex", flexDirection: "column", gap: m ? 12 : 14, minWidth: 0,
+        backgroundColor: "var(--white)", borderRadius: 20,
+        padding: m ? "20px 20px 22px 20px" : "24px 28px 26px 28px",
+        gridColumn: "1 / -1", /* 5th card closes the 2x2 grid over the full width */
       },
       toolGroupTitleStyle: Object.assign({}, headline, {
         fontWeight: 400, fontSize: m ? 19 : 20, lineHeight: 1.2, letterSpacing: "-0.03em",
